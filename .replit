@@ -1,0 +1,2 @@
+language = "python3"
+run = "python ./hackerrank/python3/30days_code/day24_*.py"
