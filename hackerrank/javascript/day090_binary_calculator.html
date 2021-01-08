@@ -1,0 +1,90 @@
+<!-- Enter your HTML code here -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+body {
+  width:33%;
+}  
+#res {
+  background-color: lightgray;
+  border: solid;
+  height: 48px;
+  font-size: 20px;
+}
+#btn0, #btn1 {
+  background-color: lightgreen;
+  color: brown;
+}
+#btnClr, #btnEql {
+  background-color: darkgreen;
+  color: white;
+}
+#btnSum, #btnSub, #btnMul, #btnDiv {
+  background-color: black;
+  color: red;
+}
+#btns .btnClass{
+  width: 25%; height: 36px; 
+  font-size: 18px;
+  margin: 0px;
+  float: left;
+}
+    </style>
+    <title>Binary Calculator</title>
+  </head>
+  <body>
+    <div id="binaryCalculator">
+      <div id="res"></div>
+      <div id="btns">
+        <button id="btn0" class="btnClass">0</button>
+        <button id="btn1" class="btnClass">1</button>
+        <button id="btnClr" class="btnClass">C</button>
+        <button id="btnEql" class="btnClass">=</button>
+        <button id="btnSum" class="btnClass">+</button>
+        <button id="btnSub" class="btnClass">-</button>
+        <button id="btnMul" class="btnClass">*</button>
+        <button id="btnDiv" class="btnClass">/</button>
+      </div>
+    </div>
+    <script type="text/javascript">
+      function onButton(e) {
+    var btn = e.target || e.srcElement;
+    var action = document.getElementById(btn.id).innerHTML;
+    var res = document.getElementById('res');
+    
+    switch(action) {
+        case '0':
+        case '1':
+        case '+':
+        case '-':
+        case '*':
+        case '/':
+            res.innerHTML += action;
+            break;
+        case 'C':
+            res.innerHTML = '';
+            break;
+        case '=':
+            var expr = res.innerHTML;
+            var nums = /(\d+)/g;
+            // Replace all base 2 nums with base 10 equivs
+            expr = expr.replace(nums, function(match) {
+                return parseInt(match, 2);
+            })
+            // eval in base 10 and convert to base 2
+            res.innerHTML = eval(expr).toString(2);
+            break;
+        default:
+            console.error('should not be executed');
+            break;
+    }
+}
+var buttons = document.getElementsByTagName('button');
+for (let button of buttons) {
+    button.onclick = onButton;
+}
+    </script>
+  </body>
+</html>

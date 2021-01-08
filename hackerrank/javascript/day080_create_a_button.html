@@ -1,0 +1,27 @@
+<!-- Enter your HTML code here -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+          .buttonStyleClass {
+            width: 96px;
+            height: 48px;
+            font-size: 24px;
+          }
+        </style>
+        <title>Button</title>
+    </head>
+    <body>
+      <script src="js/button.js" type="text/javascript">
+        var newBtn = document.createElement('button');
+          newBtn.id = 'btn';
+          newBtn.className = 'buttonStyleClass'
+          newBtn.innerHTML = '0';
+          document.body.appendChild(newBtn);
+          newBtn.onclick = function(){
+            newBtn.innerText = parseInt(newBtn.innerText) + 1
+        }
+      </script>
+    </body>
+</html>
