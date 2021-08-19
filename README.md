@@ -1,3 +1,3 @@
-# My Solutions
+# My Repository
 Hi there ✌,
-This is my solutions 💠
+This is my repositories 💠
