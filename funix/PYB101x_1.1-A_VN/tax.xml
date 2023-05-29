@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taxs>
+	<tax>
+		<min>0</min>
+		<max>5</max>
+		<value>5</value>
+	</tax>
+	<tax>
+		<min>5</min>
+		<max>10</max>
+		<value>10</value>
+	</tax>
+	<tax>
+		<min>10</min>
+		<max>18</max>
+		<value>15</value>
+	</tax>
+	<tax>
+		<min>0</min>
+		<max>5</max>
+		<value>5</value>
+	</tax>
+	<tax>
+		<min>18</min>
+		<max>32</max>
+		<value>20</value>
+	</tax>
+	<tax>
+		<min>32</min>
+		<max>52</max>
+		<value>25</value>
+	</tax>
+	<tax>
+		<min>52</min>
+		<max>80</max>
+		<value>30</value>
+	</tax>
+	<tax>
+		<min>80</min>
+		<value>35</value>
+	</tax>
+</taxs>
