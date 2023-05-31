@@ -2,8 +2,8 @@ class Node:
   def __init__(self, data, next=None):
     self.data = data
     self.next = next
-  def printOut(self):
-    print(self.data, self.next)
+  def __str__(self):
+    return ' '.join(list(map(str, [self.data, self.next])))
   
 class LinkedList:
   def __init__(self, head=None):
@@ -30,34 +30,25 @@ class LinkedList:
       node = node.next
       counter+=1
     return node
-  def strLessThanOrEquals(self, value):
-    strOut = ''
+  def removeBigger(self, k):
+    nodeAtK = self.getAt(k)
+    if nodeAtK is None:
+      return self
+    value = nodeAtK.data
     if self.head is None:
-      return strOut
+        return None
     node = self.head
-    while node is not None:
-      if node.data<=value:
-        strOut += node.data + ' '      
+    while node.next is not None:
+      if node.next.data > value and node.next.next is not None:
+        temp = node.next
+        node.next = temp.next
+        continue
       node = node.next
-    return strOut  
-  def removeBigger(self, value):
-    node = self.head
-    preNode = node
-    while node is not None:
-      if node.data>value:
-        preNode = node.next
-        preNode.next = node
-        node = node.next
-        break
-      node = node.next
-    while node is not None:
-      if node.data <= value:
-        newNode.head = newNode
-      node = node.next
-    return newNode
-      
-
-
+    if self.head.data > value:
+        self.shift()
+    if node.data > value:
+        self.pop()
+    return self
   def pushAt(self, index, data):
     newNode = Node(data)
     if self.head is None:
@@ -123,27 +114,20 @@ class LinkedList:
       strOut += str(node.data) + ' '
       node = node.next
     return strOut
-  def printOut(self):
-    print(self)
 
 def listLinker(list_in):
   # 21 : https://codelearn.io/learning/cau-truc-du-lieu-va-giai-thuat/805177
   list_obj = LinkedList()
   for e in list_in:
     list_obj.push(e)
-  # list_obj.printOut()
+  # print(list_obj)
   return list_obj
 
 def listRemoveBigger(list_in, k):
   # 26 : https://codelearn.io/learning/cau-truc-du-lieu-va-giai-thuat/809803
   list_obj = listLinker(list_in)
-  list_obj.printOut()
+  print(list_obj, k)
   return list_obj.removeBigger(k)
-
-def listLessThanOrEquals(list_in, k):
-  # 26 : https://codelearn.io/learning/cau-truc-du-lieu-va-giai-thuat/809803
-  list_obj = listLinker(list_in)
-  return list_obj.strLessThanOrEquals(k)
 
 def listInsertAt(list_in, k, x):
   # 22 : https://codelearn.io/learning/cau-truc-du-lieu-va-giai-thuat/777654
@@ -170,7 +154,8 @@ def listSetAtt(list_in, a, b):
 
 # print(listRemoveBigger([int(input()) for _ in range(int(input())) ], int(input())))
 print(listRemoveBigger([1,1,2,2,3,3],2))
-# print(listLessThanOrEquals([int(input()) for _ in range(int(input())) ], int(input())))
+print(listRemoveBigger([5,4,3,2,1],3))
+print(listRemoveBigger([1,2,3,2,1],3))
 # print(listSetAtt([int(input()) for _ in range(int(input())) ], int(input()), int(input())))
 
 # listGetAt([int(input()) for _ in range(int(input())) ], int(input()))
