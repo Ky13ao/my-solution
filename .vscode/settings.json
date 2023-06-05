@@ -1,0 +1,16 @@
+{
+  "sqltools.connections": [
+    {
+      "mysqlOptions": {
+        "authProtocol": "default"
+      },
+      "previewLimit": 50,
+      "server": "54.180.9.144",
+      "port": 54064,
+      "driver": "MySQL",
+      "name": "goorm",
+      "username": "root",
+      "database": "online_shop"
+    }
+  ]
+}
