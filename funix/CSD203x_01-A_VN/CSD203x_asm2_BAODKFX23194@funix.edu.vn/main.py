@@ -98,5 +98,5 @@ class AS2_Main:
 if __name__ == "__main__":
   app = AS2_Main()
   # data for trial run from beginning
-  # app.ops.loadListFromTSVFile("outdata.txt")
+  app.ops.loadListFromTSVFile("outdata.txt")
   app.launch()
