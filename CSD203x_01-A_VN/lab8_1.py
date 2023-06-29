@@ -44,13 +44,18 @@ class TreeHeight:
     def calculate_height(vertex):
       if vertex==-1:
         return 0
+      # nếu đã ghi đỉnh này vào height thì trả về giá trị đã ghi
       if vertex in heights:
         return heights[vertex]
+      # nếu chưa ghi đỉnh cha của đỉnh này thì tính chiều cao đỉnh cha bằng phương pháp đệ quy
       if self.parent[vertex] not in heights:
         heights[self.parent[vertex]] = calculate_height(self.parent[vertex])
+      # chiều cao của đỉnh sẽ bằng chiều cao của đỉnh cha + 1
       height = heights[self.parent[vertex]] + 1
       heights[vertex] = height
+      # trả giá trị cho đệ quy
       return height
+    # tìm ra chiều cao cao nhất của các đỉnh bằng cách ghi lại vào dict những giá trị đã tính
     return max(calculate_height(vertex) for vertex in range(self.n))
 
 def main():

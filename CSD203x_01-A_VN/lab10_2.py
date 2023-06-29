@@ -27,20 +27,35 @@ class JobQueue:
       next_free_time[next_worker] += self.jobs[i]
 
   def assign_jobs(self):
-    # use heapq module throughout the operation
+    """
+    Dùng heap để theo dõi lần rãnh rỗi tiếp theo của từng worker
+    Cải tiến việc giao việc bằng cách tối thiếu thời gian hoàn thành tổng quát
+    Độ phức tạp thời gian của thuật toán này là O(j log w)
+    So với thuật toán gốc thời gian là O(j*w)
+    """
     import heapq
     self.assigned_workers = [None] * len(self.jobs)
     self.start_times = [None] * len(self.jobs)
-    # update min-heap to store tuples (times, workers)
+    # khởi tạo tuple (số việc, số worker) list theo thứ tự tăng dần theo số worker
     next_free_time = [(0, i) for i in range(self.num_workers)]
+    print(list(next_free_time))
+    # đưa min-heap vừa tạo vào heapq
     heapq.heapify(next_free_time)
+    print(list(next_free_time))
 
-    #reduce O(jw) to O(j)
+    # giảm O(jw) --> O(j)
     for i in range(len(self.jobs)):
+      # công nhân được chọn để giao nhiệm vụ là công nhân có số nhiệm vụ ít nhất
+      # hàm heappop sẽ làm điều đó
       next_worker = heapq.heappop(next_free_time)
+      # công nhân làm việc i sẽ là công nhân vừa được chọn
       self.assigned_workers[i] = next_worker[1]
+      # việc bắt đầu ở vị trí i sẽ là số việc người được chọn đang làm
       self.start_times[i] = next_worker[0]
+      # thêm 1 node vào cây heap 
+      # (số việc = số việc người được đang làm + số việc của công việc, số công nhân = số công nhân đó)
       heapq.heappush(next_free_time, (next_worker[0] + self.jobs[i], next_worker[1]))
+      print(list(next_free_time))
 
 
   def solve(self):

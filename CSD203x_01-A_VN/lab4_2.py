@@ -13,7 +13,7 @@ Giới hạn bộ nhớ. 512Mb.
 '''
 def optimal_weight(W, w):
     # write your code here
-    # Khởi tạo mảng cache với Trọng số 0 nghĩa là không lấy gì
+    # Khởi tạo mảng cache với Trọng số 0 nghĩa là không lấy gì, phần tử base ta đặt là 1
     cache=[[True]+[False]*W]
     for i in range(len(w)):
       # Clone mảng boolean gốc

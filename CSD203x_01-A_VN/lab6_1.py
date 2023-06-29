@@ -65,6 +65,7 @@ def lab61_08():
   def daydondieu(arr):
     if len(arr)<2:
         return 'YES'
+    # nếu dãy giảm c = 1, tăng c= 2, ko tăng ko giảm trả về `NO`
     if a[0]>a[1]:
         c = 1
     elif a[0]<a[1]:

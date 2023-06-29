@@ -13,16 +13,23 @@ Mục tiêu trong bài toán này là thiết kế lại một triển khai đã
 '''
 def partition3(a, l, r):
   #write your code here
+  # đầu tiên đặt phần tử là phần tử đầu tiên
   x = a[l]
+  # duyệt mảng a từ vị trí `l` --> `r`
   i = l
   while i<=r:
     if a[i] < x:
+      # nếu phần tử hiện tại < phần tử chốt thì hoán vị 2 phần tử a[i] a[l]
+      # thu hẹp vùng duyệt bằng cách tăng biến `l`
       swap(a, l, i)
       l += 1
       i += 1
     elif a[i]==x:
+      # nếu phần tử hiện tại = phần tử chốt thì duyệt tiếp
       i +=1
     else:
+      # nếu phần tử hiện tại > phần tử chốt thì hoán vị a[i] a[r]
+      # không tăng `i` để xử lý tiếp phần tử ở vị trí `i` hiện tại, vì ko chắc i đã được sắp xếp đúng
       swap(a, i, r)
       r -=1
   return l, r

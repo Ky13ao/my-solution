@@ -11,23 +11,23 @@ Bạn sắp tổ chức một cuộc thi thú vị cho trẻ em. Quỹ giải th
 - Giới hạn bộ nhớ. 512MB.
 '''
 def optimal_summands(n):
-    summands = []
-    #write your code here
-    k=1
-    # Nếu số kẹo còn lại > k thì gán k
-    while n-k>k:
-      summands.append(k)
-      n-=k
-      k+=1
-    # Nếu vẫn còn thì chia hết phần còn lại, số này chắc chắn bé hơn a[k]
-    if n>0:
-      summands.append(n)
-    return summands
+  summands = []
+  #write your code here
+  k=1
+  # Nếu số kẹo còn lại > k thì gán k
+  while n-k>k:
+    summands.append(k)
+    n-=k
+    k+=1
+  # Nếu vẫn còn thì chia hết phần còn lại, số này chắc chắn bé hơn a[k]
+  if n>0:
+    summands.append(n)
+  return summands
 
 if __name__ == '__main__':
-    # input = sys.stdin.read()
-    n = int(input())
-    summands = optimal_summands(n)
-    print(len(summands))
-    for x in summands:
-        print(x, end=' ')
+  # input = sys.stdin.read()
+  n = int(input())
+  summands = optimal_summands(n)
+  print(len(summands))
+  for x in summands:
+    print(x, end=' ')

@@ -19,6 +19,9 @@ def get_majority_element(a, left, right):
         return a[left]
     #write your code here
     def majorityIn(l, r):
+      """
+      Return the element and its count of mj element's appearance from index `l` till `r`.
+      """
       if l==r:
         return a[l], 1
       m=(r-l)//2+l

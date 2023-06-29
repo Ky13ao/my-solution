@@ -15,26 +15,33 @@ Mục tiêu của bạn là thiết kế và triển khai giải thuật quy ho�
 '''
 def optimal_sequence(n):
   # write your code here
-  cache = [0 for _ in range(n+1)]
-  cache[1] = 1
+  cache = [0 for _ in range(n+1)] # Khởi tạo mảng cache toàn 0 để chứa các số phép tính nhỏ nhất cho mỗi con số trong khoảng [1..n]
+  cache[1] = 1 # Phần tử base: số phép tính ít nhất để tính ra được số 1 là 1
   for i in range(1, n+1):
     if cache[i]!=0:
+      # Nếu số hiện tại đã được tính rồi (!=0)
+      #   ta kiểm các phép tính số i+1, i*2, i*3 có thể được tính với ít phép tính hơn hay ko
+      #   cập nhật cache theo kết quả kiểm tra
       if i+1<n+1 and (cache[i+1]==0 or cache[i+1]>cache[i]+1):
         cache[i+1]=cache[i]+1
       if i*2<n+1 and (cache[i*2]==0 or cache[i*2]>cache[i]+1):
         cache[i*2]=cache[i]+1
       if i*3<n+1 and (cache[i*3]==0 or cache[i*3]>cache[i]+1):
         cache[i*3]=cache[i]+1
-  sequence = []
+  sequence = [] # tạo 1 list để chứa các số sẽ trả về như đề bài yêu cầu
+  # Dựng lại trình tự cần thiết bằng cách duyệt lùi từ n --> 1
   while n>=1:
-    sequence.append(n)
+    sequence.append(n) # Thêm số duyệt hiện tại vào list
+    #Check the minimum number of operations for the next number in the sequence
+    # Kiểm tra số phép tính ít nhất với số tiếp theo theo thứ tự i+1, i*2, i*3
+    # Chọn số tiếp theo để đưa vào ( lấy số nhỏ nhất khi kiểm tra ) 
     if cache[n-1]==cache[n]-1:
       n-=1
     elif n%2==0 and cache[n//2]==cache[n]-1:
       n//=2
     elif n%3==0 and cache[n//3]==cache[n]-1:
       n//=3
-
+  # Trả về danh sách theo đúng thứ tự
   return sequence[::-1]
 
 # input = sys.stdin.read()
