@@ -1,0 +1,10 @@
+*.pyc
+.idea/misc.xml
+*.xml
+*.iml
+dist/
+build/lib
+build/scripts-*
+build/bdist.*
+vncpasswd.py.egg-info/
+MANIFEST

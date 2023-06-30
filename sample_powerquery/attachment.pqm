@@ -1,0 +1,11 @@
+let
+    Source = SharePoint.Files(sharepointPath),
+    FeedList = Table.SelectRows(Source, each Text.EndsWith([#"Folder Path"], "Site_Attachments/")),
+    #"Apply Increament Parameter" = Table.SelectRows(FeedList, each [Date modified] >= RangeStart and [Date modified] <= RangeEnd),
+    TransformedColumns = Table.TransformColumns(#"Apply Increament Parameter", {{"Attributes", each [Author=_[CreatedBy][UserName], Editor=_[ModifiedBy][UserName], ObsId=_[RecordId], Id=_[Id], Obsoleted=_[Obsoleted], Type=_[ActionTypeValue], Description=_[ActionDescription]]}}),
+    #"Removed Other Columns" = Table.SelectColumns(TransformedColumns,{"Name", "Date modified", "Date created", "Attributes", "Folder Path"}),
+    #"Merged Columns" = Table.CombineColumns(#"Removed Other Columns",{"Folder Path", "Name"},Combiner.CombineTextByDelimiter("", QuoteStyle.None),"FilePath"),
+    #"Expanded Attributes" = Table.ExpandRecordColumn(#"Merged Columns", "Attributes", {"Author", "Editor", "ObsId", "Id", "Obsoleted", "Type", "Description"}, {"Author", "Editor", "ObsId", "Id", "Obsoleted", "Type", "Description"}),
+    #"Renamed Columns" = Table.RenameColumns(#"Expanded Attributes",{{"Date modified", "Modified"}, {"Date created", "Created"}})
+in
+    #"Renamed Columns"

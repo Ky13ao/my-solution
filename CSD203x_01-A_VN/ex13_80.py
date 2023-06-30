@@ -8,19 +8,27 @@ Ví dụ
 """
 
 def check(n, e, u, v):
+  # giả thiết các đỉnh đều được đi qua
   visited = [True] * (n + 1)
+  # và n+1 cạnh ko đi qua
   adjacency = [[False] * (n + 1) for _ in range(n + 1)]
   for edge in e:
+    # các cạnh được nêu trong input đều sẽ được đi qua
     adjacency[edge[0]][edge[1]] = True
   
   def dfs(start, target, nodes_count, adjacency, visited):
+    # thủ tục dfs duyệt các đỉnh theo chiều sâu
+    # đỉnh duyệt sẽ không duyệt lại
     visited[start]=False
     for i in range(1, nodes_count+1):
       if adjacency[start][i] and visited[i]:
+        # khi duyệt hết các đỉnh, dừng duyệt
         if i == target:
           return True
+        # duyệt đỉnh có cạnh liền kề
         if dfs(i, target, nodes_count, adjacency, visited):
           return True
+        # đánh dấu đã duyệt
         visited[i]=True
     return False
   return dfs(u, v, n, adjacency, visited)

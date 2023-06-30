@@ -1,0 +1,8 @@
+let
+    Source = SharePoint.Tables(sharepointPath),
+    Factor_human = Source{[Name="Factor_human"]}[Content],
+    #"Apply Increament Parameter" = Table.SelectRows(Factor_human, each [Modified] >= RangeStart and [Modified] <= RangeEnd),
+    #"Removed Other Columns" = Table.SelectColumns(#"Apply Increament Parameter",{"Id", "Title", "SponsorId", "SupervisorId", "Escalations", "Modified", "Created", "Obsoleted", "RecordId"}),
+    #"Renamed Columns" = Table.RenameColumns(#"Removed Other Columns",{{"RecordId", "ObsId"}})
+in
+    #"Renamed Columns"

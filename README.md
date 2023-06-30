@@ -26,7 +26,10 @@ All code will be become your reference as your welcome.
 ├── OSM201x.4.0.VN/ - A Learning Course from FUNiX
 ├── PYB101x_1.1-A_VN/ - A Learning Course from FUNiX
 ├── references/ - solutions I found out on other sites
-├── repl.it.js - main js script to run on repl.it machine
-├── repl.it.py - main python3 script to run on repl.it machine
+├── replit_scripts/ - the script to run inside replit machine
+│ ├── test.js - main js script
+│ └── test.py - main python3 script
+├── sample_powerquery/ - saved sample powerquery scripts
+├── sample_python/ - saved sample python scripts
 └── README.md
 ```
