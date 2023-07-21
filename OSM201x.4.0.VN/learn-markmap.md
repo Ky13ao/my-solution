@@ -183,9 +183,19 @@
   `^str1^str2^` replace "str1" by "str2" in last command then redo
   `!string:n` obtain nth argument in last command starts with "string"
 
+### shell prompt
+
+- self help
+  - `man bash`
+  - change value of "PS1" environment variable
+
 ### shell alias
 
-### shell prompt
+- key word: `alias`
+- syntax:
+  - new alias: `alias alias_name=’aliased_command –options’`
+  - remove alias: `unalias alias_name`
+  - set alias while starting up: write down the alias syntax to file `~/.bashrc`
 
 ## c++
 
@@ -249,6 +259,10 @@
   `sem_wait(&semVar); // wait for resource access`
   `sem_post(&semVar); // post to mark process as done`
   `sem_destroy(&semVar); // gỡ biến khỏi bộ nhớ`
+
+### `<unistd.h>` fork() & exec()
+
+### `<sys/wait.h>` wait() & waitpid()
 
 ## thuật toán lập lịch
 
@@ -506,18 +520,159 @@
 
 ## kernel
 
-- OS vs Kernel
-  - OS:
-    - là 1 trong những thành phần quan trọng nhất giúp quản lý tài nguyên phần mềm và phần cứng máy tính.
-    - là chương trình đầu tiên bắt đầu khi máy tính khởi động.
-    - giống như 1 phần mềm hệ thống (system software).
-    - mục đích chính của hệ điều hành là cung cấp bảo mật.
-    - nó cung cấp một giao diện giữa phần cứng và người dùng.
-    - đối với máy tính, không có hệ điều hành sẽ ko chạy được
-  - Kernel
-    - là thành phần cốt lõi của hệ điều hành giúp dịch các câu truy vấn của người dùng thành ngôn ngữ máy
-    - là chương trình đầu tiên khởi động khi hệ điều hành chạy
-    - là phần mềm hệ thống, là một thành phần quan trọng của hệ điều hành
-    - mục đích chính của kernel là quản lý bộ nhớ, đĩa và tác vụ
-    - nó cung cấp một giao diện giữa ứng dụng và phần cứng
-    - không có kernel, hệ diều hành không chạy được
+### OS vs Kernel
+
+- OS:
+  - là 1 trong những thành phần quan trọng nhất giúp quản lý tài nguyên phần mềm và phần cứng máy tính.
+  - là chương trình đầu tiên bắt đầu khi máy tính khởi động.
+  - giống như 1 phần mềm hệ thống (system software).
+  - mục đích chính của hệ điều hành là cung cấp bảo mật.
+  - nó cung cấp một giao diện giữa phần cứng và người dùng.
+  - đối với máy tính, không có hệ điều hành sẽ ko chạy được
+- Kernel
+  - là thành phần cốt lõi của hệ điều hành giúp dịch các câu truy vấn của người dùng thành ngôn ngữ máy
+  - là chương trình đầu tiên khởi động khi hệ điều hành chạy
+  - là phần mềm hệ thống, là một thành phần quan trọng của hệ điều hành
+  - mục đích chính của kernel là quản lý bộ nhớ, đĩa và tác vụ
+  - nó cung cấp một giao diện giữa ứng dụng và phần cứng
+  - không có kernel, hệ diều hành không chạy được
+
+### lời gọi hệ thống(system calls)
+
+- là 1 phương thức tương tác với hệ điều hành thông qua các chương trình.
+- là 1 phương pháp để chương trình máy tính yêu cầu 1 dịch vụ (service) từ kernel của hệ điều hành mà nó đang chạy.
+
+- user mode vs. kernel mode
+
+  - user mode:
+    - a. DEFINITION:
+      _restricted mode_ mà các chương trình ứng dụng đang thực thi và khởi động
+    - b. MODES:
+      _user mode_ được xem là _restricted mode_
+    - c. ADDRESS SPACE:
+      trong _user mode_, _1 process_ có không gian địa chỉ riêng của họ.
+    - d. INTERRUPTIONS:
+      trong _user mode_, nếu xảy ra _interrupt_, CHỈ CÓ 1 _process_ bị lỗi
+    - e. DISADVANTAGES:
+      trong _user mode_ có 1 số hạn chế khi truy cập các ứng dụng kernel. không thể truy cập trực tiếp
+  - kernel mode:
+    - a. DEFINITION:
+      là _privileged mode_ mà máy tính sẽ truy cập tài nguyên phần cứng
+    - b. MODES:
+      _kernel mode_ là _system mode_, _privileged mode_
+    - c. ADDRESS SPACE:
+      trong _kernel mode_, _các processes_ nhận được 1 không gian địa chỉ.
+    - d. INTERRUPTIONS:
+      trong _kernel mode_, nếu xảy ra _interrupt_, toàn bộ hệ thống đều có thể bị lỗi
+    - e. DISADVANTAGES:
+      trong _kernel mode_ cả chương trình người dùng và chương trình kernel đều có thể được truy cập
+
+- context switching vs. mode switching
+
+  - context switching
+    - là cơ chế lưu trữ và khôi phục lại trạng thái hoặc ngữ cảnh (context) của
+      CPU trong khối điều khiển tiến trình (PCB - Process Control Block)
+      để có thể tiếp tục thực thi tiến trình từ cùng một thời điểm sau đó.
+  - mode switching
+    - được sử dụng khi CPU thay đổi các mức đặc quyền (privelege levels).
+    - kernel được hoạt động với _privilege_ cao hơn so với tác vụ của _standard user_
+    - để truy cập các tác vụ của _user_ được kernel điều khiển, cần phải thực hiện _mode switching_
+    - tiến trình đang được thực thi KHÔNG thay đổi trong quá trình _mode switching_
+    - CPU sử dụng các chế độ để "bảo vệ" OS khỏi các chương trình độc hại hoặc hoạt động sai,
+      cũng như kiểm soát các quyền truy cập đồng thời vào RAM, thiết vị I/O,...
+
+- Nhân bản
+  - fork() function
+    - fork được sử dụng bởi một tiến trình để tạo ra một bản sao của chính nó
+      nghĩa là không gian địa chỉ logic sẽ giống hệt nhau, ngoại trừ ID tiến trình
+    - tiến trình có thể tạo ra nhiều trình con của nó.
+      khi khởi động máy tính, hệ điều hành sẽ được nạp vào bộ nhớ chính
+      và trở thành một tiến trình đặc quyền (privileged process)
+      đây được gọi là cha của mọi tiến trình hay còn gọi là tiến trình gốc
+      nếu người dùng nhập vào một lệnh terminal thì một tiến trình con mới sẽ được tạo ra từ tiến trình _user shell_
+      có thể xem mối quan hệ giữa các tiến trình như một cấu trúc dữ liệu cây
+    - nhược điểm
+      - chi phí chuyển đổi ngữ cảnh (context switching)
+      - lãng phí bộ nhớ do duy trì nhiều bản sao của một tiến trình (cùng 1 không gian địa chỉ)
+  - exec() function
+    - exec cũng là 1 cơ chế tạo tiến trình được hỗ trợ trên hầu hết các hệ điều hành
+    - so sánh với fork:
+      - fork():
+        - tạo một tiến trình con và sao chép PCB của tiến trình cha
+          cho tiến trình con vừa được tạo ra
+        - tiến trình con sẽ thực thi tại lệnh nằm ngay sau lệnh fork
+          vì tiến trình cha và tiến trình con có chung PCB ngoại trừ
+          thông tin về định danh tiến trình
+      - exec():
+        - tạo một tiến trình con thông qua fork nhưng không sao chép PCB
+          của tiến trình cha cho tiên trình con
+        - nạp một chương trình mới và bắt đầu thực thi
+          từ lệnh đầu tiên của chương trình mới này
+
+## thread & multi-thread
+
+### stack & heap
+
+#### stack
+
+- là cấu trúc dữ liệu tuyến tính
+- không bao giờ bị phân mảnh
+- stack chỉ truy cập các biến cục bộ
+- không thay đổi kích thước
+- bộ nhớ stack được phân bổ trong khối liền kề
+- stack ko yêu cầu phân bổ lại
+- phân bổ và hủy phân bổ Stack được thực hiện theo hướng dẫn của trình biên dịch
+
+#### heap
+
+- là cấu trúc dữ liệu phân nhánh
+- có thể bị phân mảnh khi các khối bộ nhớ được cấp phát trước và sau đó được giải phóng
+- heap cho phép bạn truy cập các biến toàn cầu
+- có thể thay đổi kích thước
+- bộ nhớ heap được phân bổ theo bất kỳ thứ tự ngẫu nhiên nào
+- luôn yêu cầu phân bổ lại
+- phân bổ và hủy phân bổ heap được thực hiện bởi lập trình viên
+
+### single thread
+
+- _process_ là những công việc mà hệ điều hành thực hiện 1 lần
+- _thread_ là 1 đơn vị cơ bản trong CPU.
+  1 thread sẽ chia sẻ với các luồng khác trong cùng process
+  về thông tin data, các dữ liệu của mình
+- 1 process có thể chưa nhiều luồng bên trong nó
+  vd: khi chúng ta chạy ứng dụng,
+  hệ điều hành tạo ra 1 tiến trình và bắt đầu chạy các luồng chính của tiến trình đó
+- 1 thread có thể làm bất kỳ task gì 1 process có thể làm
+  tuy nhiên, vì 1 tiến trình có thể chứa nhiều luồng, mỗi luồng có thể coi như là một tiến trình nhỏ
+- ngoài ra, nhiều luồng nằm trong cùng một tiến trình dùng 1 không gian bộ nhớ giống nhau, trong khi tiến trình thì không
+
+### multi thread
+
+- _process_ có một vùng nhớ riêng, song các _process_ trong cùng 1 _process_ thì dùng chung địa chỉ nhớ
+  và các _process_ cũng dùng chung bất cứ tài nguyên nào nằm trong tiến trình đấy.
+  có nghĩa là rất dễ chia sẻ dữ liệu giữa các thread
+  nhưng cũng rất dễ "nhảy" từ thread này sang thread khác
+  dấn đến 1 kết quả không mong muốn
+- ưu điểm:
+  1. KHẢ NĂNG ĐÁP ỨNG:
+     _multi thread_ có thể giúp ứng dụng tương tác có thể hoạt động tốt hơn
+     vì ngay cả khi một phần chương trình bị block
+     hoặc cần một thời gian dài để hoạt động,
+     chương trình nhìn chung vẫn có thể chạy
+  2. KHẢ NĂNG CHIA SẺ TÀI NGUYÊN
+     các tiến trình có thể chia sẻ dữ liệu thông qua các kỹ thuật
+     - _shared memory (vùng bộ nhớ chung)_
+     - _message sharing (chia sẻ tin)_
+  3. TIẾT KIỆM
+     việc cung cấp tài nguyên và dữ liệu cho quá trình tạo _process_ rất tốn kém
+     và vì threads tự động chia sẻ data cho _process_ mà nó thuộc về
+     việc tạo các thread cho việc _context-switch_ sẽ giúp tiết kiệm chi phí rất nhiều
+     không chỉ chi phí mà còn là thời gian
+     vì việc tạo một process mới sẽ lâu hơn nhiều so với tạo một thread mới
+  4. SCALABITY (MỞ RỘNG):
+     lợi ích của multithreaded được thể hiện rõ trong
+     ~ _kiến trúc đa xử lý (multiprocessor achitecture)_
+     ~ multithread giúp các threads hoạt động song song trong các lõi xử lý khác nhau
+     trong khi đối với tiến trình dạng _single-threaded_
+     ~ một thread chỉ có thể chạy trên 1 bộ xử lý
+     ~ không quan trọng việc có bao nhiêu thread trong hệ thống hiện tại
