@@ -676,3 +676,80 @@
      trong khi đối với tiến trình dạng _single-threaded_
      ~ một thread chỉ có thể chạy trên 1 bộ xử lý
      ~ không quan trọng việc có bao nhiêu thread trong hệ thống hiện tại
+
+## quản lý I/O
+
+- bất kỳ thiết bị nào cũng có 1 tập các thanh ghi để truy xuất bởi CPU
+- các thanh ghi điều khiển được chia thành 3 loại
+  - lệnh: CPU điều khiển thiết bị thực hiện công việc nào đó
+  - truyền dữ liệu: truyền dữ liệu giữa CPU và thiết bị
+  - trạng thái: Trạng thái của thiết bị
+- bản thân thiết bị sẽ kết hợp các thành phần đặc thù khác bao gồm
+  - vi điều khiển: giống như CPU, dùng để điều khiển thiết bị
+  - bộ nhớ: lưu dữ liệu
+  - các logic khác: thực hiện các chức năng khác, ví dụ:
+    bộ chuyển đổi tín hiệu tương tự sang số (ADC),..
+- các tiêu chuẩn kết nối:
+  - PCI Bus
+  - PCIe Bus
+  - SCSI Bus
+  - Peripheral bus
+  - Bright bus
+  - controllers
+- Mỗi trình điều khiển có trách nhiệm truy cập, quản lý và điều khiển thiết bị
+- các trình điều khiển thiết bị thường được các nhà sản xuất phần cứng hiện thực
+  và cung cấp cho toàn bộ OS tương thích (Windows, Linux, Mac)...
+- để hỗ trợ tính đa dạng của các thiết bị, OS thường gom nhóm các thiết bị thành các loại sau:
+  - khối dữ liệu (block): ví dụ như ổ đĩa cứng
+    - cho phép đọc/ ghi các khối dữ liệu
+    - có thể truy cập 1 khối dữ liệu tùy ý
+  - ký tự (character): ví dụ như bàn phím
+    - nhận/ xuất 1 ký tự
+    - dữ liệu được truyền theo từng ký tự
+  - mạng (network): truyền một chuỗi dữ liệu vào/ ra
+- OS duy trì sự hiện diện của mỗi thiết bị đang kết nối tới hệ thống thông qua việc đóng gói chúng thành 1 file.
+- trong các hệ thống dựa trên UNIX, toàn bộ thiết bị xuất hiện như là các file tại thư mục `/dev`
+- cách chính để PCI kết nối giữ CPU với thiết bị là làm cho CPU truy cập đến thiết bị giống như truy cập đến bộ nhớ
+- việc truy xuất các thanh ghi giống như các lệnh nạp/ lưu thông qua các địa chỉ
+- khi CPU ghi dữ liệu tới những địa chỉ này thì bộ điều khiển phải nhận ra được việc truy xuất thiết bị
+  và cần được điều hướng đến thiết bị thích hợp
+- một phần bộ nhớ vật lý trong hệ thống được dành riêng cho việc tương tác với thiết bị
+  kỹ thuật này được gọi là ánh xạ bộ nhớ (Memory Mapped I/O)
+- ngoài ra CPU có thể truy xuất đến các thiết bị thông qua các lệnh đặc biệt
+  mỗi lệnh này phải chỉ rõ thiết bị thông qua các cổng I/O
+  kỹ thuật này được gọi là truy xuất trực tiếp ( I/O port)
+- liên lạc giữa thiết bị và CPU có thể thông qua 2 phương thức:
+  - ngắt (interupt):
+    thiết bị gửi 1 ngắt tới CPU để yêu cầu giao tiếp
+    - ưu điểm:
+      có thể thông báo trực tiếp đển CPU cần giao tiếp
+    - nhược điểm:
+      cần nhiều bước xử lý ngắt, trình xử lý ngắt (interupt handler)
+      cần phải thiết lập và thiết lập lại mặt nạ ngắt (mask)
+      phụ thuộc vào _interupt_ có được phép hay ko
+      và cũng có thể do hệ quả của dữ liệu rác trên cache
+      liên quan đến việc thực thi của trình xử lý ngắt
+  - thăm dò (polling):
+    CPU đọc các thanh ghi của trạng thái của thiết bị để quyết định giao tiếp
+    - ưu điểm:
+      OS có thể truy xuất vào thời điểm thích hợp
+      có thể là khi dữ liệu rác trên cache ảnh hưởng không quá lớn
+    - nhược điểm:
+      gây ra sự trì hoãn mặt dù sự kiện đã hiện diện
+      và CPU có thể quá tải vì liên tục phải thực hiện việc thăm dò
+  - việc lựa chọn phương pháp ngắt hay thăm dò
+    thì phụ thuộc vào loại thiết bị và mục tiêu tối đa hóa thông lượng và giảm độ trễ
+    hay phụ thuộc vào độ phức tạp của trình xử lý ngắt và những đặc trưng của thiết bị
+- chỉ với sự hỗ trợ cơ bản từ PCI và các bộ điều khiển PCI tương ứng trên các thiết bị
+  hệ thống có thể truy cập hoặc yêu cầu mọi hoạt động từ một thiết bị sử dụng phương pháp gọi là lập trình I/O
+
+- CPU có thể ra lệnh cho thiết bị thông qua việc ghi vào các thanh ghi lệnh (command)
+  và di chuyển dữ liệu xung quanh bằng cách truy cập vào các thanh ghi truyền dữ liệu của thiết bị
+  ví dụ, CPU sử dụng network interface card (thẻ giao diện mạng) để gửi gói TCP thông qua lập trình I/O
+  - 1. CPU viết lệnh để yêu cầu gói tin
+  - 2. CPU sao chép gói tin vào thanh ghi dữ liệu
+  - 3. lặp lại cho đến khi gói tin được gửi
+- đối với 1 gói tin 1500bytes và thanh ghi 8bytes
+  nó sẽ cần 1 truy cập để ghi lệnh
+  và 188 truy cập để truyền dữ liệu
+  tổng cộng là 189 truy cập
