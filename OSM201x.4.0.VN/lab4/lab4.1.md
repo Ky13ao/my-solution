@@ -39,9 +39,9 @@ Tính toán thông lượng (throughput), thời gian quay vòng trung bình (av
 > - Average waiting time = (24 + 0 + 13 + 0 + 0) / 5 = 7.4s
 > - Average turnaround time = (36 + 7 + 21 + 3 + 6) / 5 = 14.6s
 
-**_Bài giải_**
+## **_Bài giải_**
 
-### First-Come, First-Served (FCFS):
+#### First-Come, First-Served (FCFS):
 
 Áp dụng thuật toán FCFS, tiến trình sẽ được thực thi theo thứ tự đến trước thực thi trước. Dưới đây là bảng biểu diễn quá trình thực thi của từng tiến trình:
 
@@ -57,7 +57,7 @@ Tính toán thông lượng (throughput), thời gian quay vòng trung bình (av
 - Thời gian quay vòng trung bình (Average Turnaround Time) = (12 + 17 + 22 + 21 + 24) / 5 = 19.2s
 - Thời gian chờ trung bình (Average Waiting Time) = (0 + 10 + 14 + 18 + 18) / 5 = 12s
 
-### Non-preemptive SJF:
+#### Non-preemptive SJF:
 
 Áp dụng thuật toán Non-preemptive SJF, tiến trình có thời gian thực thi ngắn nhất sẽ được thực thi trước.
 Tiến trình được thực hiện theo thứ tự sau:
@@ -72,11 +72,11 @@ Tiến trình được thực hiện theo thứ tự sau:
 
 GANTT CHART:
 
-```
-|           T1          | T4  |     T5    |      T2     |      T3       |
-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|
-0                      12    15          21            28              36
-```
+> ```r
+> |           T1          | T4  |     T5    |      T2     |      T3       |
+> |-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|
+> 0                      12    15          21            28              36
+> ```
 
 Tính toán thông lượng (throughput), thời gian quay vòng trung bình (average turnaround time) và thời gian chờ trung bình (average waiting time) của các tiến trình:
 
@@ -89,7 +89,7 @@ Average Turnaround Time = (12 + 6 + 9 + 26 + 31) / 5 = 16.8
 Thời gian chờ trung bình (Average Waiting Time): Tổng thời gian chờ của tất cả các tiến trình / Số tiến trình
 Average Waiting Time = (0 + 3 + 3 + 19 + 23) / 5 = 9.6
 
-### Preemption-based SJF:
+#### Preemption-based SJF:
 
 Áp dụng thuật toán Preemption-based SJF, tiến trình có thời gian thực thi ngắn nhất sẽ được thực thi trước, và nếu có tiến trình mới có thời gian thực thi ngắn hơn xuất hiện, tiến trình đang chạy sẽ bị gián đoạn và tiến trình mới sẽ được thực thi. Dưới đây là bảng biểu diễn quá trình thực thi của từng tiến trình:
 
@@ -109,13 +109,13 @@ GANTT CHART:
 0   2             9    12          18              26                  36
 ```
 
-Bắt đầu ở thời điểm 0s, T1 được thực thi
-Thời điểm 2s, T2 được thực thi ưu tiên (do tiến trình ngắn hơn tiến trình T1 ) trong vòng 7s, hoàn thành ở giây thứ 9 => thời gian đợi là 0, thời gian quay vòng là 9-2=7
-Thời điểm 5s, T3 được gọi nhưng thời gian thực thi lớn hơn thời gian của T2, nên đợi đến giây thứ 9
-Thời điểm 9s, T4 được gọi sau khi T2 hoàn thành, thời gian thực thi T4 < T3 nên T4 được thực thi trong 3 giây, hoàn thành ở giây 12, thời gian quay quay vòng là 12-9=3, thời gian đợi là 9-9=0
-Thời điểm 12s, T5 được gọi sau khi T4 hoàn thành, thời gian thực T4 < T3 nên T5 được thực thi trong 6 giây, hoàn thành ở giấy thứ 18, thời gian quay vòng là 18-12=6, thời gian đợi là 12-12=0
-Thời điểm 18s, T3 được thực thi do T1 vẫn lớn hơn T3, hoàn thành ở giây thứ 24, thời gian quay vòng 24-5=19, thời gian đợi 18-5=13
-Thời điểm 24s, T1 được tiếp tục thực thi 10 giây còn lại, hoàn thành ở giây thứ 34, thời gian quay vòng là 34-0=34, thời gian chờ là 24-2=22
+1. Bắt đầu ở thời điểm 0s, T1 được thực thi
+2. Thời điểm 2s, T2 được thực thi ưu tiên (do tiến trình ngắn hơn tiến trình T1 ) trong vòng 7s, hoàn thành ở giây thứ 9 => thời gian đợi là 0, thời gian quay vòng là 9-2=7
+3. Thời điểm 5s, T3 được gọi nhưng thời gian thực thi lớn hơn thời gian của T2, nên đợi đến giây thứ 9
+4. Thời điểm 9s, T4 được gọi sau khi T2 hoàn thành, thời gian thực thi T4 < T3 nên T4 được thực thi trong 3 giây, hoàn thành ở giây 12, thời gian quay quay vòng là 12-9=3, thời gian đợi là 9-9=0
+5. Thời điểm 12s, T5 được gọi sau khi T4 hoàn thành, thời gian thực T4 < T3 nên T5 được thực thi trong 6 giây, hoàn thành ở giấy thứ 18, thời gian quay vòng là 18-12=6, thời gian đợi là 12-12=0
+6. Thời điểm 18s, T3 được thực thi do T1 vẫn lớn hơn T3, hoàn thành ở giây thứ 24, thời gian quay vòng 24-5=19, thời gian đợi 18-5=13
+7. Thời điểm 24s, T1 được tiếp tục thực thi 10 giây còn lại, hoàn thành ở giây thứ 34, thời gian quay vòng là 34-0=34, thời gian chờ là 24-2=22
 
 - Thông lượng (Throughput) = Số lượng tiến trình /Tổng thời gian thực thi = 5 / 36 ≈ 0.14 (task/s)
 - Thời gian quay vòng trung bình (Average Turnaround Time) = (36 + 7 + 21 + 3 + 6) / 5 = 14.6s

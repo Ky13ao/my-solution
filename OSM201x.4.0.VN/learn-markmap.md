@@ -1,8 +1,32 @@
 # Operating System
 
-## bash/ shell
+## linux folder structure
+
+### / - root
+
+- `/bin/` - Essential User Command Binaries/ Chương trình người dùng
+- `/boot/` - Static files of Boot loader/ các file khởi động
+- `/dev/` - Device Files/ các file thiết bị
+- `/etc/` - Host specific system configuration/ các file cấu hình
+- `/home/` - User home Directories/ Thư mục người dùng
+- `/lib/` - shared libraries/ thư viện hệ thống
+- `/media/` - Removable media/ các thiết bị gắn ( có thể gỡ )
+- `/mnt/` - Mounted Filesystem/ Thư mục mounted của các thiết bị
+- `/opt/` - Add-on Application software package/ add-on đóng gói của các ứng dụng
+- `/sbin/` - system binaries/ chương trình hệ thống
+- `/srv/` - data for service from system/ dữ liệu của các dịch vụ khác
+- `/tmp/` - temporary files/ thư mục chứa các file tạm
+- `/usr/` - User utilities and applications/ chương trình của người dùng
+- `/proc/` - process information/ thông tin về các tiến trình
+
+## linux bash/ shell
 
 ### basic command
+
+- `cd` - change dir
+- `clear` - clear the screen
+- `grep` - find a string of text file
+- `exit` - logout linux
 
 #### print
 
@@ -264,14 +288,88 @@
 
 ### `<sys/wait.h>` wait() & waitpid()
 
-## thuật toán lập lịch
+## tiến trình và thuật toán lập lịch
+
+### lập lịch CPU - có 3 dạng:
+
+#### long term scheduler (Job Scheduler)
+
+- xác định các tiến trình từ storage pool để đưa vào empty pool
+  để đưa vào ready queue nằm trong bộ nhớ chính cho việc thực thi tiến trình
+- **LT Scheduler** điều khiển **degree of multiprogramming** _(số tiến trình trong bộ nhớ chính)_ - tạm gọi là mức độ đa chương
+- nếu **mức độ đa chương** này ổn định thì tỉ lệ trung bình của các tiến trình mới khởi tạo
+  bằng với tỉ lệ trung bình các tiến trình kết thúc được giải phóng ra khỏi hệ thống
+- vì vậy **LTS** có thể chỉ cần được gọi khi một tiến trình rời khỏi hệ thống
+  bởi vì khoảng thời gian giữa hai lần thực thi của **LTS** dài hơn
+  nên nó có thể đáp ứng được vấn đề cần nhiều thời gian
+  để quyết định tiến trình nào nên được chọn để thực thi
+- quan trọng
+  - **LTS** cần phải chọn 1 tiến trình một cách kĩ càng
+  - hầu hết các process có thể thiên về 1 trong 2 hướng:
+    - **I/O bound**
+      - tiến trình sẽ dành nhiều hơn để thực hiện các tác vụ I/O hơn là tính toán
+    - **CPU bound**
+      - ngược lại với tiến trình I/O
+  - **LTS** cần phải chọn 1 tiến trình tốt, kết hợp giữa I/O bound processes và CPU bound processes
+  - nếu tất cả các tiến trình đều là I/O bound
+    - ready queue hầu như sẽ luôn luôn trống và **STS** sẽ có ít việc để làm hơn
+  - nếu tất cả các tiến trình đều là CPU bound
+    - hàng đợi IO sẽ hầu như luôn luôn trống
+    - các thiết bị sẽ không được sử dụng và như vậy hệ thống trở nên mất cân bằng
+  - một hệ thống với hiệu năng tối đa vì vậy sẽ có sự kết hợp giữa I/O bound và CPU bound processes
+
+#### short term scheduler (Dispatchers)
+
+- xác định 1 tiến trình trong ready queue và bắt đầu lên lịch cho việc thực thi tiến trình đó
+- **STS** thực thi thường xuyên hơn nhiều so với **LTS** vì một tiến trình có thể chỉ thực thi trong vài mili giây
+- sự lựa chọn của **STS** rất quan trọng
+  - nếu chọn một tiến trình có burst time dài
+  - thì tất cả các tiến trình sau đó sẽ phải đợi một thời gian dài trong ready queue
+- đây chính là starvation và nó có thể xảy ra nếu **STS** đưa ra quyết định sai lầm
+
+#### medium term scheduler
+
+- xác định tiến trình nào được đưa vào (swap in), đưa ra khỏi (swap out) bộ nhớ chính
+- swap in/out có thể tốn đến vài giây
+- tiến trình có thể được hoán đổi kể từ thời điểm đó ngừng thực thi
+  điều này cũng có thể được gọi là suspending và resuming tiến trình
+  điều này hữu ích trong việc giảm độ đa chương
+
+### các thuật toán lập lịch
+
+#### first come first served (FCFS)
+
+- là thuật toán đơn giản nhất
+- tiến trình **đến trước sẽ thực thi trước** theo queue
+
+#### non-preemptive SJF (Shortest Job First)
+
+- tiến trình được thực thi với độ ưu tiên thời gian
+- tiến trình nào **có thời gian thực thi ngắn hơn sẽ được thực thi trước**
+
+#### preemptive based SJF
+
+- giống như thuật toán **Non-preemptive SJF**
+  nhưng khi xuất hiện 1 tiến trình có thời gian thực thi ngắn hơn
+  tiến trình sẽ **bị gián đoạn** để thực thi tiến trình mới
+
+#### highest response ratio next (HRNN) (advance)
+
+- là 1 trong những giải thuật lập lịch tối ưu nhất
+- là 1 thuật toán không ưu tiên
+- việc lập lịch trình được thực hiện trên cơ sở của 1 tham số bổ sung
+  được gọi là Tỷ lệ phản hồi
+  Tỷ lệ phản hồi được tính cho từng công việc có sẵn
+  và công việc có tỷ lệ phản hồi cao nhất được ưu tiên hơn các công việc khác
+  Tỷ lệ phản hồi được tính theo công thức
+  HRRN scheduling -> CPI Scheduling -> Gate Vidyalay
 
 ## đồng bộ hóa
 
 ### tạo bộ nhớ chung
 
-- tạo ra vùng bộ nhớ chung để giao tiếp
-- ưu điểm
+- là tạo ra vùng bộ nhớ chung để giao tiếp
+- **ưu điểm**
   - giao tiếp giữa các tiến trình nhanh hơn
   - giao tiếp đồng thời 1 vùng dữ liệu
   - tăng tốc khả năng tính toán
@@ -280,11 +378,11 @@
 - cơ chế đồng bộ hóa
   - phải đảm bảo duy trì tính nhất quán của dữ liệu
   - đảm bảo chỉ 1 quy trình có thể thay đổi dữ liệu tại 1 thời điểm
-  - các cơ chế đồng bộ hóa điển hình là: mutex, semaphore,...
+  - các cơ chế đồng bộ hóa điển hình là: **mutex**, **semaphore**,...
   - phải đáp ứng 3 yêu cầu:
-    - mutual exclusion / loại trừ lẫn nhau
-    - progress / tiến trình
-    - bounded waiting / giới hạn chờ đợi
+    - **mutual exclusion** / loại trừ lẫn nhau
+    - **progress** / tiến trình
+    - **bounded waiting** / giới hạn chờ đợi
 
 ### các cơ chế đồng bộ hóa
 
