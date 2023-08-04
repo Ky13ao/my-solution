@@ -16,3 +16,40 @@
   -- Repeatable read: Gần giống như mức độ của Read Committed, tại mức độ này thì các transaction sẽ không thể đọc hoặc ghi đè dữ liệu từ một transaction đang tiến hành cập nhật trên bản ghi đó.
   -- Serializable: Level cao nhất của Isolation, khi transaction tiến hành thực thi nó sẽ khóa các bản ghi liên quan và sẽ unlock cho tới khi rollback hoặc commit dữ liệu.
 
+SELECT * FROM INFORMATION_SCHEMA.USER_PRIVILEGES WHERE GRANTEE="'user1'@'localhost'";
+SELECT * FROM INFORMATION_SCHEMA.USER_PRIVILEGES WHERE GRANTEE="'user2'@'localhost'";
+
+-- YC1: hien thi cac ACID
+  SELECT @session.tx_tsolation;
+
+-- YC2: read uncommitted ISOLATION LEVEL
+  -- switch user1
+  USE online_shop;
+  SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
+  START TRANSACTION;
+  SELECT * FROM customers;
+
+  -- switch user2
+  USE online_shop;
+  UPDATE customers SET name = 'name C ' WHERE id = 2;
+
+  -- switch user1
+  SELECT * FROM customers;
+
+  -- mặc dù transaction chưa commit nhưng isolation level là read uncommitted nên vẫn đọc được 
+
+-- YC3: read committed ISOLATION LEVEL
+  -- switch user1
+  USE online_shop;
+  SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
+  START TRANSACTION;
+  INSERT INTO customers(name, email) VALUES('name D', 'A@gmail.com');
+  SELECT * FROM customers;
+
+  --switch user2
+  USE online_shop;
+  SELECT * FROM customers;
+
+  --switch user1
+  COMMIT;
+
