@@ -194,7 +194,7 @@ DELIMITER ;
   4. Đóng con trỏ và giải phóng bộ nhớ:
      `CLOSE <ten_con_tro>;`
 
-### TRIGGER
+### `TRIGGER`
 
 - TRIGGER được kích hoạt khi một hành động xác định được thực thi cho bảng
 - Thường được ứng dụng để: kiểm tra dữ liệu, đồng bộ dữ liệu, đảm bảo các mối quan hệ được đồng nhất
@@ -221,11 +221,11 @@ DELIMITER ;
   > ON <ten_bang> FOR EACH ROW
   > BEGIN
   > <noi_dung_trigger>;
-  > END $$
+  > END$$
   > DELIMITER ;
   > ```
 
-### INDEX
+### `INDEX`
 
 - là chỉ mục dùng để tìm các hàng có giá trị cột cụ thể một cách nhanh chóng.
   không có chỉ mục, MySQL phải bắt đầu với hàng đầu tiên và sau đó đọc qua toàn bộ bảng để tìm các hàng có liên quan.
@@ -298,3 +298,188 @@ DELIMITER ;
 - các cột là PRIMARY KEY hoặc UNIQUE khi tạo sẽ mặc định luôn được MySQL đánh INDEX BTREE
 
 ## SQL Server - license
+
+## Data Model
+
+### Các khái niệm cơ bản
+
+- Data: là bất cứ sự kiện nào chúng ta có thể lưu trữ lại
+- Database: là nơi để lưu trữ data
+- DBMS: là phần mềm để quản lý các database có một số các DBMS rất phổ biến như MySQL, Microsoft SQL,..
+
+### Các loại data model
+
+#### ER Model (Entity Relational Model)
+
+- là Mô hình thực thể quan hệ: được biểu diễn qua sơ đồ
+- có 3 đối tượng
+  - Entity:
+    Đối tượng/ thực thể quan hệ
+  - Relationship
+    Mối quan hệ giữa các đối tượng
+  - Attribute
+    Là thuộc tính của đối tượng
+- là kiểu thực thể yếu (Weak Entity)
+  - sự tồn tại phụ thuộc vào thực thể khác ( thực thể làm chủ hay còn gọi là xác định nó)
+  - kiểu thực thể yếu không có khóa
+  - kiểu thực thể yếu luôn có lực lượng tham gia liên kết toàn bộ
+- Ưu điểm:
+  - rất dễ hiểu
+  - thể hiện được thông tin một cách tổng quát
+- nhược điểm
+  - không thể biểu diễn giá trị cụ thể của các đối tượng
+- được biểu diễn bằng các hình khối:
+  - Hình chữ nhật
+    Thường được biểu diễn đối tượng
+  - Hình thoi
+    Thường để biểu diễn hành động của 1 đối tượng lên một đối tượng khác
+  - Hình elip
+    Thường được biểu diễn các thuộc tính của đối tượng
+- ER model sẽ được biểu thị thông qua qua các đối tượng, mối quan hệ hay thuộc tính
+  nhưng để lưu trữ hoặc triển khai trong cơ sở dữ liệu thực tế chúng ta cần một mô hình dạng bảng đó là Relational Model
+- các thuộc tính có thể thuộc 1 hoặc nhiều nhóm sau:
+  - Thuộc tính nguyên tố (Simple attribute)
+    Là thuộc tính ko thể chia nhỏ hơn
+  - Thuộc tính phức hợp (Composite atribute)
+    Là thuộc tính có thể chia nhỏ hơn giống như Họ và Tên có thể chia thành họ, tên đệm, tên
+  - Thuộc tính đơn trị (Single valued attribute)
+    Là thuộc tính có giá trị duy nhất. ví dụ "thẻ căn cước" của 1 đối tượng người
+  - Thuộc tính đa trị (Multi valued attribute)
+    Là thuộc tính có thể có nhiều giá trị. ví dụ như "bằng cấp" của 1 đối người
+  - Thuộc tính lưu trữ (Stored attribute)
+    những thuộc tính được tự động cập nhật vào khi cài đặt cơ sở dữ liệu. vd ngày cập nhật
+  - Thuộc tính suy dẫn (Derived attribute)
+    là thuộc tính có thể suy ra từ thuộc tính khác liên quan theo 1 quy tắc nào đó ( không phải nhập trước). vd năm sinh được lưu trữ, còn tuổi thì tính theo năm sinh
+  - Thuộc tính khóa (Key attribute)
+    là thuộc tính duy nhất cho mỗi thực thể, giúp phân biệt thực thể này và thực thể khác trong cùng 1 kiểu thực thể
+    một kiểu thực thể có thể có nhiều khóa, ví dụ căn cước công dân sẽ là thuộc tính khóa vì thuộc tính này sẽ xác định duy nhất các thực thể là 'Người'
+- Các ràng buộc liên kết
+  - ràng buộc về sự tham gia liên kết được xác định trên từng thực thể
+    trong từng kiểu liên kết mà thực thể đó tham gia, bao gồm:
+    - lực lượng tham gia toàn bộ (total participant)
+    - lực lượng tham gia bộ phận (partial participant)
+  - vd: Kiểu liên kết Manages giữa 2 kiểu thực thể EMPLOYEE và DEPARTMENT
+    lực lượng của kiểu tham gia DEPARTMENT là toàn bộ vì department nào cũng có người quản lý
+    còn lực lượng tham gia của kiểu thực thể EMPLOYEE là bộ phận vì ko phải EMPLOYEE nào cũng là quản lý (manages) của DEPARTMENT
+- Các kiểu quan hệ
+  - Quan hệ one-to-one (1-1) vd. bang SINHVIEN va THONGTINCANCUOC, mỗi sinh viên chỉ có 1 thông tin căn cước
+  - Quan hệ one-to-many (1-N) vd. bang LOP va SINHVIEN, mỗi lớp thì có nhiều sinh viên
+  - Quan hệ many-to-many(N-N) vd. bảng SINHVIEN và MONHOC thì mỗi sinh viên sẽ học nhiều môn học và ngược lại, một môn học sẽ được học bởi nhiều sinh viên
+- Bậc của kiểu liên kết là số lượng các kiểu thực thể tham gia vào liên kết, có các kiểu liên kết sau
+  - kiểu liên kết bậc 1 (đệ quy) là mối quan hệ giữa cùng 1 kiểu thực thể
+  - kiểu liên kết bậc 2 là mối liên kết giữa 2 kiểu thực thể
+  - kiểu liên kết bậc 3 là mối liên kết giữa 3 kiểu thực thể
+
+#### Relational Model
+
+- Được biểu diễn bằng cách sử dụng các bảng
+- ưu điểm:
+  - biểu diễn được giá trị các đối tượng
+- nhược điểm:
+  - không thể hiện được rõ ràng thông tin tổng quát
+- các đối tượng:
+  - Relation: đối tượng bảng
+  - Tuple: một hàng trong Relation(table), chúng ta cũng có thể gọi là 1 bản ghi (record)
+  - Attribute (thuộc tính): Một cột trong relation(table), chúng ta cũng có thể thêm 1 trường (field)
+  - Domain of attribute (miền thuộc tính): một tập hợp các giá trị của cột
+- ER Model trong Relational Model, Entity chỉ đóng vai 1 bản ghi, còn các thuộc tính là loại thực thể (Entity Type)
+- Mức độ của 1 Relation
+  - là mối quan hệ của các thuộc tinh trong 1 mối quan hệ được gọi là mức độ của quan hệ
+  - Intension: Schema hoặc Entity Type được gọi là Intension
+  - Extension: Một thể hiện của Schema, ví dụ 1 Entity của table được gọi là Extension
+- Quy tắc quan trọng trong Relational Model
+  - không có bản sao nào nên tồn tại trong 1 Relation (quan hệ)
+    hay nói cách khác chúng ta sẽ ko có Tuple nào trùng nhau trong một Relation
+  - mặc dù miền của một thuộc tính không chứa Null
+    Null vẫn có thể được đưa vào Tuple
+    Null có nghĩa là không tồn tại
+- các loại ràng buộc trong Relational Model
+  - **Domain contraints (ràng buộc miền)**:
+    trong mỗi Tuple, giá trị của mỗi thuộc tính phải là giá trị nguyên tử (không thể chia nhỏ hơn)
+    chúng ta ko thể sử dụng thuộc tính phức hợp hoặc đa giá trị
+  - **Key contraints (ràng buộc khóa)**
+    không có tuple nào trùng nhau ( giá trị của tất cả các thuộc tính giống nhau).
+    một relation không được có tuple nào trùng nhau
+    đối với loại ràng buộc này chúng ta sẽ có 4 loại key
+    - **super key**
+      là tập hợp các thuộc tính xác định duy nhất 1 Tuple trong 1 Relation (quan hệ)
+    - **key**
+      là tập nhỏ nhất của Super key
+      - vd chúng ta có tập hợp {a, b, c} là 1 super key, nếu bỏ "c" đi thì {a, b} vẫn là Super Key
+        trong trường hợp ko bỏ đi a hoặc b, lúc này {a, b} được gọi là key
+    - **candidate key**
+      nếu có nhiều hơn 1 Key trong một Relation, chúng ta có thể Key là các Candidate Keys
+    - **primary key**
+      Candidate Key được sử dụng để triển khai trong cơ sở dữ liệu thì chúng ta gọi là Primary Key
+  - **Entity Integrity Contraints** (ràng buộc tính toàn vẹn thực thể)
+    - một primary key sẽ ko thể có giá trị Null
+  - **Referential integrity contraints** (ràng buộc toàn vẹn tham chiếu)
+    - trong một mô hình quan hệ, chúng ta sẽ có nhiều Relation
+      và giữa các Relation sẽ có quan hệ với nhau được liên kết qua khóa ngoại Foreign Key
+      Giả sử có 2 Relation R1 và R2, nếu R1,
+      chứa 1 trường có vai trò là khóa chính của B ( khóa ngoại của A )
+      khi B thay đổi hoặc chỉnh sửa dữ liệu thì sẽ ảnh hưởng đến A.
+      Sự ràng buộc này, chúng ta gọi là tính toàn vẹn tham chiếu
+    - có thể xảy ra xung đột dữ liệu bởi các hành động:
+      - INSERT
+        - Xảy ra khi FK ID ko có ID tồn tại trong bảng REFERENCE
+      - DELETE
+        - xảy ra khi xóa ID có FK ID từ các bảng tham chiếu đến
+      - UPDATE
+        - xảy ra khi update FK ID nhưng trong bảng tham chiếu ko có ID được tham chiếu
+
+#### Chuyển đổi
+
+- 4 nguyên tắc cần thiết để chuyển đổi
+  ER model sang Relational Model
+
+  - Mỗi entity trong ER Model sẽ là 1 Relation (table) trong Relation Model
+  - Thuộc tính nguyên tố trong ER model sẽ là 1 thuộc tính trong Relational Model
+  - Nếu 1 thuộc tính trong ER model là 1 khóa chính thì nó sẽ là 1 PK trong Relational Model
+  - Nếu thuộc tính trong ER model là 1 thuộc tính phức hợp thì thuộc tính đó sẽ được chia thành các thuộc tính nguyên tố sau đó mỗi thuộc tính nguyên tố sẽ là 1 Column trong Relational Model
+
+- 3 quy tắc đối với các Relationship
+
+  - **Quan hệ 1-N (one-to-many)**
+    Chúng ta sẽ lấy khóa của Entity bên 1 đặt làm FK của Relation bên N
+  - **Quan hệ 1-1 (one-to-one)**
+    Ở mỗi Relation sẽ chứa Khóa của các Entity còn lại
+    tức là sau khi chuyển đổi
+    ở mỗi Relation đều có FK của Relation còn lại
+  - **Quan hệ N-M (many-to-many)**
+    Ngoài việc mỗi Entity sang 1 Relation,
+    chúng ta cần tạo 1 Relation mới để chứa khóa của cả 2 Entity.
+    ví dụ chúng ta có Entity A có khóa P1 và Entity B có khóa là P2
+    lúc này chúng ta cần tạo ra một relation X chứa cả P1 và P2 trong mỗi Tuple (hàng).
+
+- Thuộc tính đa thị và phức hợp trong ER model **ko hợp lệ** đối với Relational Model
+  Do vậy, khi gặp thuộc tính đa trị
+  chúng ta cần tạo ra **một Relation mới có 2 cột**
+  - **cột thứ 1**: chứa khóa của Entity cha (Entity chứa thuộc tính đa trị)
+  - **cột thứ 2**: sẽ lấy tên của thuộc tính đa trị làm khóa
+
+#### Tìm số lượng bảng phù hợp
+
+công thức tìm số bảng:
+
+- Số bảng tối thiểu:
+  `No. of Entities` + `No. of N-M Relations` + `No. of MultiValued Attributes`
+- Số bảng tối đa:
+  `No. of Entities` + `No. of Relations` + `No. of MultiValued Attributes`
+
+#### Làm thực thể yếu mạnh hơn
+
+- **thực thể mạnh
+  strong entity**
+  - là thực thể có thuộc tính khóa
+  - chuyển đổi như thông thường
+- **thực thể yếu
+  weak entity**
+  - là thực thể không có thuộc tính khóa
+  - để chuyển đổi sang Relational Model như thông thường
+    chúng ta dùng khóa chính bao gồm:
+    `khóa của thực thể liên kết cùng` + `thuộc tính bất kỳ trong thực thể`
+
+#### mối quan hệ bậc N
+
+- ngoài việc mỗi Entity sẽ chuyển đổi sang 1 Relation thì chúng ta sẽ tạo thêm một bảng chứa khóa của tất cả các Entity đó
