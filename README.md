@@ -25,6 +25,7 @@ All code will be become your reference as your welcome.
 ├── DBI202x_3.0.VN/ - A Learning Course from FUNiX
 ├── OSM201x.4.0.VN/ - A Learning Course from FUNiX
 ├── PYB101x_1.1-A_VN/ - A Learning Course from FUNiX
+│ └── rdbms.md - knowledge mindmap - markmap extension needed
 ├── references/ - solutions I found out on other sites
 ├── replit_scripts/ - the script to run inside replit machine
 │ ├── test.js - main js script

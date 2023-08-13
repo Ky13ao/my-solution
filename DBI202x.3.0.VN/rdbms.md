@@ -3,7 +3,19 @@
 RDBMS
 
 ## MySQL - open source
+### Cài đặt Server
+#### GroomIDE - online
+#### Standalone server - MySQL official
+### Database
+#### Database
 
+- create database: `CREATE DATABASE <database_name>`;
+- obsolete database: `DROP DATABASE IF EXISTS <database_name>`;
+- list down all databases: `SHOW DATABASES;`
+- switch database: `USE <database name>`;
+- print current database: `SELECT DATABASE();`
+
+#### DBMS - Database Management System
 ### Transactions
 
 - 4 Đặc điểm của transaction:
