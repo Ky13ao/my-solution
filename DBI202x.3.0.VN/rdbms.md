@@ -1,24 +1,71 @@
-# Relational Database Management Systems
+# RDBMS
 
-RDBMS
+Relational Database Management Systems
 
-## MySQL - open source
-### Cài đặt Server
+
+## Cài đặt Server
+### MySQL - open source
 #### GroomIDE - online
 #### Standalone server - MySQL official
+### Microsoft SQL Server
+## Data Types
+
+### General SQL
+
+## Basic DDL
+
+### Data Definition Language
+
+- `CREATE` - `DROP`
+- `ALTER` - `RENAME`
+
 ### Database
-#### Database
 
-- create database: `CREATE DATABASE <database_name>`;
-- obsolete database: `DROP DATABASE IF EXISTS <database_name>`;
+- create database: `CREATE DATABASE <database_name>;`
+- obsolete database: `DROP DATABASE IF EXISTS <database_name>;`
 - list down all databases: `SHOW DATABASES;`
-- switch database: `USE <database name>`;
+- switch database: `USE <database name>;`
 - print current database: `SELECT DATABASE();`
+- list down all tables in current databases: `SHOW TABLES;`
 
-#### DBMS - Database Management System
-### Transactions
+### Table
 
-- 4 Đặc điểm của transaction:
+## DQL
+
+### Data Query Language
+
+- `SELECT`
+- `AS` clause
+- `WHERE` clause
+- `ORDER BY` - `LIMIT` (MySQL) `TOP` (MSSQL)
+
+### Buildin Functions
+
+## Basic DML
+
+### Data Manipulation Language
+
+- `INSERT` - `UPDATE`
+- `DELETE`
+
+## DCL
+
+### Data Control Language
+
+#### MySQL
+
+- `GRANT` - `REVOKE`
+
+#### MSSQL
+
+- `LOGIN`
+- `USER`
+- `ROLE`
+
+## TCL
+### Transaction Control Language
+
+#### 4 Đặc điểm của transaction:
 
   - Tính nguyên tố (**Atomicity**)
     Một transaction bao gồm các hoạt động khác nhau phải thỏa mãn điều kiện
@@ -32,7 +79,7 @@ RDBMS
   - Tính bền vững (**Durability**)
     Khi một transaction được commit thành công dữ liệu sẽ được lưu lại 1 cách chuẩn xác
 
-- có 4 kiểu lock dữ liệu:
+#### có 4 kiểu lock dữ liệu:
 
   - **Table locking**:
     Transaction `T1` đang dùng _bảng A_ thì các transaction khác không thể sử dụng _bảng A_
@@ -45,7 +92,7 @@ RDBMS
     Transaction đang sử dụng bảng dữ liệu có thể đọc và ghi dữ liệu vào bảng
     nhưng các transaction khác ko thể ghi dữ liệu vào bảng mà chỉ có thể đọc dữ liệu từ bảng
 
-- Isolation của transaction sẽ có 4 cấp độ:
+#### Isolation của transaction sẽ có 4 cấp độ:
   - **Read uncommited**
     1 transaction đọc dữ liệu từ 1 transaction khác dù chưa hoàn thành
   - **Read committed** (cấp độ mặc định)
@@ -62,6 +109,8 @@ RDBMS
 #### `SAVEPOINT`
 
 #### `ROLLBACK`
+
+## Advanced DDL
 
 ### Proc & Func
 
@@ -126,9 +175,10 @@ END$$
 DELIMITER ;
 ```
 
-#### Vòng lặp và con trỏ
 
-##### `WHILE` loop
+### `WHILE` và `LOOP`
+
+#### `WHILE` loop
 
 - Cú pháp
 
@@ -157,7 +207,7 @@ DELIMITER;
 
 - ket qua `CALL whiledemo();` : 0123456789 (string)
 
-##### `LOOP` loop
+#### `LOOP` loop
 
 - chúng phải đặt tên cho LOOP và điều kiện để LEAVE the loop
 
@@ -183,7 +233,7 @@ DELIMITER ;
 
 - ket qua `CALL loopdemo();` : . 0. 1. 2. 3. 4. 5. 6. 7. 8. 9 (string)
 
-##### `CURSOR` con trỏ
+### `CURSOR` con trỏ
 
 - 3 thuộc tính của con trỏ:
 
@@ -309,8 +359,6 @@ DELIMITER ;
     Được sử dụng cho các dạng Spatial data và thường ít gặp
 - các cột là PRIMARY KEY hoặc UNIQUE khi tạo sẽ mặc định luôn được MySQL đánh INDEX BTREE
 
-## SQL Server - license
-
 ## Data Model
 
 ### Các khái niệm cơ bản
@@ -325,27 +373,27 @@ DELIMITER ;
 
 - là Mô hình thực thể quan hệ: được biểu diễn qua sơ đồ
 - có 3 đối tượng
-  - Entity:
+  - **Entity**:
     Đối tượng/ thực thể quan hệ
-  - Relationship
+  - **Relationship**
     Mối quan hệ giữa các đối tượng
-  - Attribute
+  - **Attribute**
     Là thuộc tính của đối tượng
-- là kiểu thực thể yếu **(Weak Entity)**
+- kiểu thực thể yếu **(Weak Entity)**
   - sự tồn tại phụ thuộc vào thực thể khác ( thực thể làm chủ hay còn gọi là xác định nó)
   - kiểu thực thể yếu không có khóa
   - kiểu thực thể yếu luôn có lực lượng tham gia liên kết toàn bộ
-- Ưu điểm:
+- **Ưu điểm**
   - rất dễ hiểu
   - thể hiện được thông tin một cách tổng quát
-- nhược điểm
+- **nhược điểm**
   - không thể biểu diễn giá trị cụ thể của các đối tượng
 - được biểu diễn bằng các hình khối:
-  - Hình chữ nhật
+  - **Hình chữ nhật**
     Thường được biểu diễn đối tượng
-  - Hình thoi
+  - **Hình thoi**
     Thường để biểu diễn hành động của 1 đối tượng lên một đối tượng khác
-  - Hình elip
+  - **Hình elip**
     Thường được biểu diễn các thuộc tính của đối tượng
 - ER model sẽ được biểu thị thông qua qua các đối tượng, mối quan hệ hay thuộc tính
   nhưng để lưu trữ hoặc triển khai trong cơ sở dữ liệu thực tế chúng ta cần một mô hình dạng bảng đó là Relational Model
@@ -433,16 +481,16 @@ DELIMITER ;
       khi B thay đổi hoặc chỉnh sửa dữ liệu thì sẽ ảnh hưởng đến A.
       Sự ràng buộc này, chúng ta gọi là tính toàn vẹn tham chiếu
     - có thể xảy ra xung đột dữ liệu bởi các hành động:
-      - INSERT
+      - `INSERT`
         - Xảy ra khi FK ID ko có ID tồn tại trong bảng REFERENCE
-      - DELETE
+      - `DELETE`
         - xảy ra khi xóa ID có FK ID từ các bảng tham chiếu đến
-      - UPDATE
+      - `UPDATE`
         - xảy ra khi update FK ID nhưng trong bảng tham chiếu ko có ID được tham chiếu
 
-#### Chuyển đổi
+### Chuyển đổi ERModel sang RModel
 
-- 4 nguyên tắc cần thiết để chuyển đổi
+#### 4 nguyên tắc cần thiết để chuyển đổi
   ER model sang Relational Model
 
   - Mỗi entity trong ER Model sẽ là 1 Relation (table) trong Relation Model
@@ -450,7 +498,7 @@ DELIMITER ;
   - Nếu 1 thuộc tính trong ER model là 1 khóa chính thì nó sẽ là 1 PK trong Relational Model
   - Nếu thuộc tính trong ER model là 1 thuộc tính phức hợp thì thuộc tính đó sẽ được chia thành các thuộc tính nguyên tố sau đó mỗi thuộc tính nguyên tố sẽ là 1 Column trong Relational Model
 
-- 3 quy tắc đối với các Relationship
+#### 3 quy tắc đối với các Relationship
 
   - _**Quan hệ 1-N (one-to-many)**_
     Chúng ta sẽ lấy khóa của Entity bên 1 đặt làm FK của Relation bên N
@@ -464,13 +512,13 @@ DELIMITER ;
     ví dụ chúng ta có Entity A có khóa P1 và Entity B có khóa là P2
     lúc này chúng ta cần tạo ra một relation X chứa cả P1 và P2 trong mỗi Tuple (hàng).
 
-- Thuộc tính đa thị và phức hợp trong ER model **ko hợp lệ** đối với Relational Model
+#### Thuộc tính đa thị và phức hợp trong ER model **ko hợp lệ** đối với Relational Model
   Do vậy, khi gặp thuộc tính đa trị
   chúng ta cần tạo ra **một Relation mới có 2 cột**
   - **cột thứ 1**: chứa khóa của Entity cha (Entity chứa thuộc tính đa trị)
   - **cột thứ 2**: sẽ lấy tên của thuộc tính đa trị làm khóa
 
-#### Tìm số lượng bảng phù hợp
+### Tìm số lượng bảng phù hợp
 
 công thức tìm số bảng:
 
@@ -479,7 +527,7 @@ công thức tìm số bảng:
 - Số bảng tối đa:
   `No. of Entities` + `No. of Relations` + `No. of MultiValued Attributes`
 
-#### Làm thực thể yếu mạnh hơn
+### Làm thực thể yếu mạnh hơn
 
 - **thực thể mạnh
   strong entity**
@@ -492,16 +540,19 @@ công thức tìm số bảng:
     chúng ta dùng khóa chính bao gồm:
     `khóa của thực thể liên kết cùng` + `thuộc tính bất kỳ trong thực thể`
 
-#### mối quan hệ bậc N
+### Mối quan hệ bậc N
 
 - ngoài việc mỗi Entity sẽ chuyển đổi sang 1 Relation thì chúng ta sẽ tạo thêm một bảng chứa khóa của tất cả các Entity đó
 
 ## Function Dependency - FD
 
+### Khái niệm Phụ thuộc hàm
+
 - là một ràng buộc xác định mối quan hệ của một thuộc tính này với 1 thuộc tính khác trong quan hệ cơ sở dữ liệu (DBMS)
 - phụ thuộc hàm giúp duy trì chất lượng dữ liệu trong cơ sở dữ liệu
 - đóng vai trò quan trọng để tìm ra sự khác biệt giữa thiết kế cơ sở dữ liệu tốt và xấu
-- các khái niệm liên quan đến các phụ thuộc hàm
+
+### các khái niệm liên quan đến các phụ thuộc hàm
   - _giới thiệu về phụ thuộc chức năng_
     - FD dùng để xác định mối quan hệ của 1 thuộc tính này
       với 1 thuộc tính khác trong quản trị cơ sở dữ liệu
@@ -571,7 +622,7 @@ công thức tìm số bảng:
     - xác định khóa
     - xác định sự tương đương của 2 tập FD
     - tìm tập hợp FD tối thiểu
-- tìm khóa dựa vào tính bao đóng
+### tìm khóa dựa vào tính bao đóng
   - thông thường nếu chúng ta chuyển đổi từ ER Model sang Relational Model thì chúng ta sẽ lấy thuộc tính khóa làm Primary Key
     nhưng trong trường hợp chúng ta ko có ER Model hoặc ko thể xác định được khóa cho 1 Relation
     mà chúng ta chỉ có các phụ thuộc hàm thì lúc này chúng ta sẽ đi xác định khóa dựa trên các phụ thuộc hàm
@@ -603,7 +654,7 @@ công thức tìm số bảng:
     - $CE$ còn được gọi là tập bao đóng thuộc tính và là một _super key_
     - $CE$ cũng ko thể chia nhỏ hơn mà vẫn là 1 super key
       nên lúc này $CE$ sẽ là 1 key của quan hệ R
-- tìm hiểu tính phân rã
+### tìm hiểu tính phân rã
   - cho $R(ABC)$ với các tập phụ thuộc hàm F: $F=(A\to B, B\to C)$
   - về tập đóng của thuộc tính, ta có `tập đóng của A` là ${A,B,C}$
   - ở đây ta sẽ tìm hiểu về tập đóng của phụ thuộc hàm
@@ -648,6 +699,7 @@ công thức tìm số bảng:
         - như vậy, ta có:
           $$F\subseteq (F_1 \cup F_2)^+ = \{A\to B,B\to C,C\to A\}$$
         - từ các phân tích trên chúng ta có thể kết luận quan hệ $R$ có thể phân rã được thành $R_1$ và $R_2$
+
 ## Chuẩn hóa dữ liệu - Normal Form
 
 ### Chuẩn hóa NF1
@@ -658,6 +710,7 @@ công thức tìm số bảng:
   - quan hệ R cũng phải đạt chuẩn NF1
   - ko có sự phụ thuộc từng phần của thuộc tính không khóa bất kỳ nào trong quan hệ R
     khóa ko được chứa các thuộc tính dẫn xuất ra thuộc tính không khóa (dựa vào phụ thuộc hàm để xác định)
+  - tất cả thuộc tính không khóa phải được dẫn xuất hoàn toàn từ khóa chính
 - ví dụ:
   - ta có $R(MNO)$ với các phụ thuộc hàm 
     (các thuộc tính đều là thuộc tính đơn trị)
