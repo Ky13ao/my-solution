@@ -2,9 +2,11 @@
 
 # vscode configuration
 .vscode/settings.json
+**/.vs
 
 # Hide API Keys
 **/.env
+
 
 # testing
 /coverage
