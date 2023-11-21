@@ -1,12 +1,17 @@
 USE [master];
-EXEC msdb.dbo.rds_cdc_disable_db N'asm1-petfinder'
-GO
-EXEC msdb.dbo.rds_drop_database N'asm1-petfinder'
+
+IF DB_ID('asm1-petfinder') IS NOT NULL
+BEGIN
+    ALTER DATABASE [asm1-petfinder] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+    DROP DATABASE [asm1-petfinder];
+END
 GO
 
 CREATE DATABASE [asm1-petfinder]
 GO
+
 USE [asm1-petfinder];
+
 
 CREATE TABLE [PetType_DIM] (
     [PetTypeID] int not null identity(1,1),
@@ -111,11 +116,9 @@ CREATE TABLE [PetFinder_CDC] (
 )
 GO
 
-USE [master];
-exec msdb.dbo.rds_cdc_enable_db @db_name='asm1-petfinder' 
+EXEC sys.sp_cdc_enable_db
 GO
 
-USE [asm1-petfinder];
 EXEC sys.sp_cdc_enable_table
     @source_schema = 'dbo',
     @source_name = 'PetFinder_CDC',
@@ -132,3 +135,5 @@ CREATE UNIQUE NONCLUSTERED INDEX [cdc_states_name] ON
  ( [name] ASC ) 
  WITH (PAD_INDEX  = OFF) ON [PRIMARY]
 GO
+
+SELECT * FROM cdc.change_tables;

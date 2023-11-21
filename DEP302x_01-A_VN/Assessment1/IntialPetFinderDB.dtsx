@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="IntialPetFinderDB"
   DTS:PackageType="5"
-  DTS:VersionBuild="50"
-  DTS:VersionGUID="{FDE5EA39-96E2-4E36-907C-897786AC4CBE}">
+  DTS:VersionBuild="52"
+  DTS:VersionGUID="{A748DB11-FE15-4691-9F9B-F23EAE476582}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,12 +25,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=dep302ssis.clhfzbeh6hge.ap-southeast-1.rds.amazonaws.com;User ID=admin;Initial Catalog=asm1-petfinder;Provider=MSOLEDBSQL.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-IntialPetFinderDB-{0BA7767B-1900-4AD7-A491-DE5B6FECDA91}asm1-ssis.admin;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAZSHV8zLMxUakzxyeRnWKEgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAA8QMJoXDUBE9kYNcphX2CLAAAAAASAAACgAAAAEAAAAG4k2fs+L9AIHa53wn2KfYMYAAAAovx/SYjCjw7Q0+fGwFqjWSXg+hcU5IRqFAAAAOMxP/U95FFGs507cLlRpOp0qxOh</DTS:Password>
-        </DTS:ConnectionManager>
+          DTS:ConnectionString="Data Source=.;Initial Catalog=asm1-petfinder;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-IntialPetFinderDB-{0BA7767B-1900-4AD7-A491-DE5B6FECDA91}asm1-ssis.admin;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -226,12 +221,7 @@
       DTS:ObjectName="PetFinder_CDC">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=dep302ssis.clhfzbeh6hge.ap-southeast-1.rds.amazonaws.com;User ID=admin;Initial Catalog=asm1-petfinder;Persist Security Info=True;Application Name=SSIS-Package-{2CD2014C-67FE-4117-A3AA-99543A40F02E}dep302ssis.clhfzbeh6hge.ap-southeast-1.rds.amazonaws.com.asm1-ssis.admin;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAZSHV8zLMxUakzxyeRnWKEgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABYlxIqlTB0cAW85TXz85M8AAAAAASAAACgAAAAEAAAACJ7QMZxeTfQwheGodl+DfkYAAAA4k3Szs7jgs9oNLfMP1hEAhB7q3ESeRkDFAAAALYZ+sKvSYMMwu2uAOkfHuSapp9N</DTS:Password>
-        </DTS:ConnectionManager>
+          DTS:ConnectionString="Data Source=.;Initial Catalog=asm1-petfinder;Integrated Security=True;Application Name=SSIS-Package-{2CD2014C-67FE-4117-A3AA-99543A40F02E}dep302ssis.clhfzbeh6hge.ap-southeast-1.rds.amazonaws.com.asm1-ssis.admin;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -1499,7 +1489,7 @@ where [refTable].[BreedName] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Pet_Fact Flow\1144:invalid};</property>
+                  name="ParameterMap">#{Package\Pet_Fact Flow\494:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1659,7 +1649,7 @@ where [refTable].[ColorName] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Pet_Fact Flow\1145:invalid};</property>
+                  name="ParameterMap">#{Package\Pet_Fact Flow\495:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1819,7 +1809,7 @@ where [refTable].[ColorName] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Pet_Fact Flow\1146:invalid};</property>
+                  name="ParameterMap">#{Package\Pet_Fact Flow\496:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1979,7 +1969,7 @@ where [refTable].[ColorName] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Pet_Fact Flow\1147:invalid};</property>
+                  name="ParameterMap">#{Package\Pet_Fact Flow\497:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -2139,7 +2129,7 @@ where [refTable].[LengthName] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Pet_Fact Flow\1148:invalid};</property>
+                  name="ParameterMap">#{Package\Pet_Fact Flow\498:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -2299,7 +2289,7 @@ where [refTable].[GenderName] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Pet_Fact Flow\1149:invalid};</property>
+                  name="ParameterMap">#{Package\Pet_Fact Flow\499:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -2459,7 +2449,7 @@ where [refTable].[HealthName] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Pet_Fact Flow\1150:invalid};</property>
+                  name="ParameterMap">#{Package\Pet_Fact Flow\500:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -2912,7 +2902,7 @@ where [refTable].[ConfirmationName] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Pet_Fact Flow\1151:invalid};</property>
+                  name="ParameterMap">#{Package\Pet_Fact Flow\501:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -3072,7 +3062,7 @@ where [refTable].[ConfirmationName] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Pet_Fact Flow\1152:invalid};</property>
+                  name="ParameterMap">#{Package\Pet_Fact Flow\502:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -3232,7 +3222,7 @@ where [refTable].[ConfirmationName] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Pet_Fact Flow\1153:invalid};</property>
+                  name="ParameterMap">#{Package\Pet_Fact Flow\503:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -3392,7 +3382,7 @@ where [refTable].[SizeName] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Pet_Fact Flow\1154:invalid};</property>
+                  name="ParameterMap">#{Package\Pet_Fact Flow\504:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -4066,7 +4056,7 @@ where [refTable].[PetTypeName] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Pet_Fact Flow\1155:invalid};</property>
+                  name="ParameterMap">#{Package\Pet_Fact Flow\505:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -4226,7 +4216,7 @@ where [refTable].[StateName] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Pet_Fact Flow\1156:invalid};</property>
+                  name="ParameterMap">#{Package\Pet_Fact Flow\506:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -11727,6 +11717,10 @@ where [refTable].[StateName] = ?</property>
           Id="Package\CDC Control Task - Mark Initial Load Start"
           TopLeft="159.999994536241,533.742855600885" />
         <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\Clean up Data before initial"
+          TopLeft="207.4999886627,325.666665792796" />
+        <NodeLayout
           Size="144.8,41.6"
           Id="Package\Pet_Fact Flow"
           TopLeft="235.565061642554,904.534918294699" />
@@ -11913,10 +11907,6 @@ where [refTable].[StateName] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="164.8,41.6"
-          Id="Package\Clean up Data before initial"
-          TopLeft="207.4999886627,325.666665792796" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
           TopLeft="286.4333242726,367.266665792796">

@@ -1,273 +1,273 @@
 <mxfile host="65bd71144e">
     <diagram id="G1k6J6d1FvON4aBr4RBC" name="Page-1">
-        <mxGraphModel dx="960" dy="452" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1058" dy="345" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="9" value="" style="group" vertex="1" connectable="0" parent="1">
+                <mxCell id="9" value="" style="group" parent="1" vertex="1" connectable="0">
                     <mxGeometry x="145" y="100" width="140" height="130" as="geometry"/>
                 </mxCell>
-                <mxCell id="8" value="City Campus 1" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.patternFillRect;fillStyle=diagGrid;step=5;fillStrokeWidth=0.2;fillStrokeColor=#dddddd;" vertex="1" parent="9">
+                <mxCell id="8" value="City Campus 1" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.patternFillRect;fillStyle=diagGrid;step=5;fillStrokeWidth=0.2;fillStrokeColor=#dddddd;" parent="9" vertex="1">
                     <mxGeometry width="140" height="130" as="geometry"/>
                 </mxCell>
-                <mxCell id="3" value="Faculty Management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=16;strokeWidth=2;" vertex="1" parent="9">
+                <mxCell id="3" value="Faculty Management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=16;strokeWidth=2;" parent="9" vertex="1">
                     <mxGeometry x="10" y="10" width="120" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="4" value="Student Management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=16;strokeWidth=2;" vertex="1" parent="9">
+                <mxCell id="4" value="Student Management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=16;strokeWidth=2;" parent="9" vertex="1">
                     <mxGeometry x="10" y="50" width="120" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="5" value="Facilities Management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=16;strokeWidth=2;" vertex="1" parent="9">
+                <mxCell id="5" value="Facilities Management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=16;strokeWidth=2;" parent="9" vertex="1">
                     <mxGeometry x="10" y="90" width="120" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="10" value="" style="group" vertex="1" connectable="0" parent="1">
+                <mxCell id="10" value="" style="group" parent="1" vertex="1" connectable="0">
                     <mxGeometry x="145" y="270" width="140" height="130" as="geometry"/>
                 </mxCell>
-                <mxCell id="11" value="City Campus 2" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.patternFillRect;fillStyle=diagGrid;step=5;fillStrokeWidth=0.2;fillStrokeColor=#dddddd;" vertex="1" parent="10">
+                <mxCell id="11" value="City Campus 2" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.patternFillRect;fillStyle=diagGrid;step=5;fillStrokeWidth=0.2;fillStrokeColor=#dddddd;" parent="10" vertex="1">
                     <mxGeometry width="140" height="130" as="geometry"/>
                 </mxCell>
-                <mxCell id="12" value="Faculty Management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=16;strokeWidth=2;" vertex="1" parent="10">
+                <mxCell id="12" value="Faculty Management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=16;strokeWidth=2;" parent="10" vertex="1">
                     <mxGeometry x="10" y="10" width="120" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="13" value="Student Management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=16;strokeWidth=2;" vertex="1" parent="10">
+                <mxCell id="13" value="Student Management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=16;strokeWidth=2;" parent="10" vertex="1">
                     <mxGeometry x="10" y="50" width="120" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="14" value="Facilities Management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=16;strokeWidth=2;" vertex="1" parent="10">
+                <mxCell id="14" value="Facilities Management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=16;strokeWidth=2;" parent="10" vertex="1">
                     <mxGeometry x="10" y="90" width="120" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="15" value="" style="group" vertex="1" connectable="0" parent="1">
+                <mxCell id="15" value="" style="group" parent="1" vertex="1" connectable="0">
                     <mxGeometry x="145" y="440" width="140" height="130" as="geometry"/>
                 </mxCell>
-                <mxCell id="16" value="City Campus 3" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.patternFillRect;fillStyle=diagGrid;step=5;fillStrokeWidth=0.2;fillStrokeColor=#dddddd;" vertex="1" parent="15">
+                <mxCell id="16" value="City Campus 3" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.patternFillRect;fillStyle=diagGrid;step=5;fillStrokeWidth=0.2;fillStrokeColor=#dddddd;" parent="15" vertex="1">
                     <mxGeometry width="140" height="130" as="geometry"/>
                 </mxCell>
-                <mxCell id="17" value="Faculty Management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=16;strokeWidth=2;" vertex="1" parent="15">
+                <mxCell id="17" value="Faculty Management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=16;strokeWidth=2;" parent="15" vertex="1">
                     <mxGeometry x="10" y="10" width="120" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="18" value="Student Management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=16;strokeWidth=2;" vertex="1" parent="15">
+                <mxCell id="18" value="Student Management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=16;strokeWidth=2;" parent="15" vertex="1">
                     <mxGeometry x="10" y="50" width="120" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="19" value="Facilities Management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=16;strokeWidth=2;" vertex="1" parent="15">
+                <mxCell id="19" value="Facilities Management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=16;strokeWidth=2;" parent="15" vertex="1">
                     <mxGeometry x="10" y="90" width="120" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="21" value="" style="group" vertex="1" connectable="0" parent="1">
+                <mxCell id="21" value="" style="group" parent="1" vertex="1" connectable="0">
                     <mxGeometry x="145" y="610" width="140" height="130" as="geometry"/>
                 </mxCell>
-                <mxCell id="22" value="City Campus 4" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.patternFillRect;fillStyle=diagGrid;step=5;fillStrokeWidth=0.2;fillStrokeColor=#dddddd;" vertex="1" parent="21">
+                <mxCell id="22" value="City Campus 4" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.patternFillRect;fillStyle=diagGrid;step=5;fillStrokeWidth=0.2;fillStrokeColor=#dddddd;" parent="21" vertex="1">
                     <mxGeometry width="140" height="130" as="geometry"/>
                 </mxCell>
-                <mxCell id="23" value="Faculty Management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=16;strokeWidth=2;" vertex="1" parent="21">
+                <mxCell id="23" value="Faculty Management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=16;strokeWidth=2;" parent="21" vertex="1">
                     <mxGeometry x="10" y="10" width="120" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="24" value="Student Management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=16;strokeWidth=2;" vertex="1" parent="21">
+                <mxCell id="24" value="Student Management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=16;strokeWidth=2;" parent="21" vertex="1">
                     <mxGeometry x="10" y="50" width="120" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="25" value="Facilities Management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=16;strokeWidth=2;" vertex="1" parent="21">
+                <mxCell id="25" value="Facilities Management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=16;strokeWidth=2;" parent="21" vertex="1">
                     <mxGeometry x="10" y="90" width="120" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="44" style="edgeStyle=none;html=1;exitX=0.968;exitY=0.109;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="26" target="27">
+                <mxCell id="44" style="edgeStyle=none;html=1;exitX=0.968;exitY=0.109;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="26" target="27" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="45" style="edgeStyle=none;html=1;exitX=1;exitY=0.359;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="26" target="28">
+                <mxCell id="45" style="edgeStyle=none;html=1;exitX=1;exitY=0.359;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="26" target="28" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="46" style="edgeStyle=none;html=1;exitX=1.005;exitY=0.64;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="26" target="29">
+                <mxCell id="46" style="edgeStyle=none;html=1;exitX=1.005;exitY=0.64;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="26" target="29" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="47" style="edgeStyle=none;html=1;exitX=0.944;exitY=0.916;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.008;entryY=0.546;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="26" target="30">
+                <mxCell id="47" style="edgeStyle=none;html=1;exitX=0.944;exitY=0.916;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.008;entryY=0.546;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="26" target="30" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="26" value="DATA WAREHOUSE" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" vertex="1" parent="1">
+                <mxCell id="26" value="DATA WAREHOUSE" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" parent="1" vertex="1">
                     <mxGeometry x="325" y="100" width="180" height="640" as="geometry"/>
                 </mxCell>
-                <mxCell id="27" value="Campus 1 Data Mart" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" vertex="1" parent="1">
+                <mxCell id="27" value="Campus 1 Data Mart" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" parent="1" vertex="1">
                     <mxGeometry x="555" y="100" width="150" height="140" as="geometry"/>
                 </mxCell>
-                <mxCell id="28" value="Campus 2 Data Mart" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" vertex="1" parent="1">
+                <mxCell id="28" value="Campus 2 Data Mart" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" parent="1" vertex="1">
                     <mxGeometry x="555" y="260" width="150" height="140" as="geometry"/>
                 </mxCell>
-                <mxCell id="29" value="Campus 3 Data Mart" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" vertex="1" parent="1">
+                <mxCell id="29" value="Campus 3 Data Mart" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" parent="1" vertex="1">
                     <mxGeometry x="555" y="440" width="150" height="140" as="geometry"/>
                 </mxCell>
-                <mxCell id="30" value="Campus 4 Data Mart" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" vertex="1" parent="1">
+                <mxCell id="30" value="Campus 4 Data Mart" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" parent="1" vertex="1">
                     <mxGeometry x="555" y="610" width="150" height="140" as="geometry"/>
                 </mxCell>
-                <mxCell id="31" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.836;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="23" target="26">
+                <mxCell id="31" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.836;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="23" target="26" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="32" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.056;entryY=0.898;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="24" target="26">
+                <mxCell id="32" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.056;entryY=0.898;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="24" target="26" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="33" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.171;entryY=0.961;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="25" target="26">
+                <mxCell id="33" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.171;entryY=0.961;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="25" target="26" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="34" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.006;entryY=0.695;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="19" target="26">
+                <mxCell id="34" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.006;entryY=0.695;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="19" target="26" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="335" y="545" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="35" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.008;entryY=0.633;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="18" target="26">
+                <mxCell id="35" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.008;entryY=0.633;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="18" target="26" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="36" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.57;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="17" target="26">
+                <mxCell id="36" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.57;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="17" target="26" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="37" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.43;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="14" target="26">
+                <mxCell id="37" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.43;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="14" target="26" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="295" y="400" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="38" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.01;entryY=0.368;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="13" target="26">
+                <mxCell id="38" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.01;entryY=0.368;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="13" target="26" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="39" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.001;entryY=0.305;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="12" target="26">
+                <mxCell id="39" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.001;entryY=0.305;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="12" target="26" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="40" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.008;entryY=0.165;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="5" target="26">
+                <mxCell id="40" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.008;entryY=0.165;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="5" target="26" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="41" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.038;entryY=0.102;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="4" target="26">
+                <mxCell id="41" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.038;entryY=0.102;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="4" target="26" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="42" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.179;entryY=0.039;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="3" target="26">
+                <mxCell id="42" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.179;entryY=0.039;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="3" target="26" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="315" y="110" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="51" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;Đối với các Data Mart dựa vào các cơ sở:&lt;/span&gt;&lt;br style=&quot;border-color: var(--border-color); font-size: 14px;&quot;&gt;&lt;div style=&quot;border-color: var(--border-color); font-size: 14px;&quot;&gt;&lt;span style=&quot;background-color: initial; font-size: 14px;&quot;&gt;- Các quản trị viên của mỗi cơ sở có thể truy cập dễ dàng mọi thứ đang tồn tại ở cơ sở đó.&lt;/span&gt;&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color); font-size: 14px;&quot;&gt;&lt;span style=&quot;background-color: initial; font-size: 14px;&quot;&gt;- Mỗi data mart cơ sở riêng có thể được tùy chỉnh và mở rộng theo bất kỳ nhu cầu cá nhân đang trong cơ sở đó với tác động tối thiểu trên các cơ sở khác&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color); font-size: 14px;&quot;&gt;&lt;span style=&quot;background-color: initial; font-size: 14px;&quot;&gt;- Bất kỳ phân tích rộng hơn nào yêu cầu dữ liệu từ ngoài cơ sở đều có thể được thực hiện trong data warehouse thay vì data mart cho cơ sở đó&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;strokeColor=none;fillColor=none;align=left;fontSize=14;" vertex="1" parent="1">
+                <mxCell id="51" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;Đối với các Data Mart dựa vào các cơ sở:&lt;/span&gt;&lt;br style=&quot;border-color: var(--border-color); font-size: 14px;&quot;&gt;&lt;div style=&quot;border-color: var(--border-color); font-size: 14px;&quot;&gt;&lt;span style=&quot;background-color: initial; font-size: 14px;&quot;&gt;- Các quản trị viên của mỗi cơ sở có thể truy cập dễ dàng mọi thứ đang tồn tại ở cơ sở đó.&lt;/span&gt;&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color); font-size: 14px;&quot;&gt;&lt;span style=&quot;background-color: initial; font-size: 14px;&quot;&gt;- Mỗi data mart cơ sở riêng có thể được tùy chỉnh và mở rộng theo bất kỳ nhu cầu cá nhân đang trong cơ sở đó với tác động tối thiểu trên các cơ sở khác&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color); font-size: 14px;&quot;&gt;&lt;span style=&quot;background-color: initial; font-size: 14px;&quot;&gt;- Bất kỳ phân tích rộng hơn nào yêu cầu dữ liệu từ ngoài cơ sở đều có thể được thực hiện trong data warehouse thay vì data mart cho cơ sở đó&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;strokeColor=none;fillColor=none;align=left;fontSize=14;" parent="1" vertex="1">
                     <mxGeometry x="145" y="870" width="435" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="53" value="Các data-marts để phân tích các dữ liệu theo từng cơ sở" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=19;fontColor=#0000FF;labelBorderColor=none;" vertex="1" parent="1">
+                <mxCell id="53" value="Các data-marts để phân tích các dữ liệu theo từng cơ sở" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=19;fontColor=#0000FF;labelBorderColor=none;" parent="1" vertex="1">
                     <mxGeometry x="125" y="25" width="500" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="54" value="" style="group" vertex="1" connectable="0" parent="1">
+                <mxCell id="54" value="" style="group" parent="1" vertex="1" connectable="0">
                     <mxGeometry x="970" y="90" width="140" height="130" as="geometry"/>
                 </mxCell>
-                <mxCell id="55" value="City Campus 1" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.patternFillRect;fillStyle=diagGrid;step=5;fillStrokeWidth=0.2;fillStrokeColor=#dddddd;" vertex="1" parent="54">
+                <mxCell id="55" value="City Campus 1" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.patternFillRect;fillStyle=diagGrid;step=5;fillStrokeWidth=0.2;fillStrokeColor=#dddddd;" parent="54" vertex="1">
                     <mxGeometry width="140" height="130" as="geometry"/>
                 </mxCell>
-                <mxCell id="56" value="Faculty Management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=16;strokeWidth=2;" vertex="1" parent="54">
+                <mxCell id="56" value="Faculty Management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=16;strokeWidth=2;" parent="54" vertex="1">
                     <mxGeometry x="10" y="10" width="120" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="57" value="Student Management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=16;strokeWidth=2;" vertex="1" parent="54">
+                <mxCell id="57" value="Student Management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=16;strokeWidth=2;" parent="54" vertex="1">
                     <mxGeometry x="10" y="50" width="120" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="58" value="Facilities Management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=16;strokeWidth=2;" vertex="1" parent="54">
+                <mxCell id="58" value="Facilities Management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=16;strokeWidth=2;" parent="54" vertex="1">
                     <mxGeometry x="10" y="90" width="120" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="59" value="" style="group" vertex="1" connectable="0" parent="1">
+                <mxCell id="59" value="" style="group" parent="1" vertex="1" connectable="0">
                     <mxGeometry x="970" y="260" width="140" height="130" as="geometry"/>
                 </mxCell>
-                <mxCell id="60" value="City Campus 2" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.patternFillRect;fillStyle=diagGrid;step=5;fillStrokeWidth=0.2;fillStrokeColor=#dddddd;" vertex="1" parent="59">
+                <mxCell id="60" value="City Campus 2" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.patternFillRect;fillStyle=diagGrid;step=5;fillStrokeWidth=0.2;fillStrokeColor=#dddddd;" parent="59" vertex="1">
                     <mxGeometry width="140" height="130" as="geometry"/>
                 </mxCell>
-                <mxCell id="61" value="Faculty Management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=16;strokeWidth=2;" vertex="1" parent="59">
+                <mxCell id="61" value="Faculty Management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=16;strokeWidth=2;" parent="59" vertex="1">
                     <mxGeometry x="10" y="10" width="120" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="62" value="Student Management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=16;strokeWidth=2;" vertex="1" parent="59">
+                <mxCell id="62" value="Student Management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=16;strokeWidth=2;" parent="59" vertex="1">
                     <mxGeometry x="10" y="50" width="120" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="63" value="Facilities Management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=16;strokeWidth=2;" vertex="1" parent="59">
+                <mxCell id="63" value="Facilities Management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=16;strokeWidth=2;" parent="59" vertex="1">
                     <mxGeometry x="10" y="90" width="120" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="64" value="" style="group" vertex="1" connectable="0" parent="1">
+                <mxCell id="64" value="" style="group" parent="1" vertex="1" connectable="0">
                     <mxGeometry x="970" y="430" width="140" height="130" as="geometry"/>
                 </mxCell>
-                <mxCell id="65" value="City Campus 3" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.patternFillRect;fillStyle=diagGrid;step=5;fillStrokeWidth=0.2;fillStrokeColor=#dddddd;" vertex="1" parent="64">
+                <mxCell id="65" value="City Campus 3" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.patternFillRect;fillStyle=diagGrid;step=5;fillStrokeWidth=0.2;fillStrokeColor=#dddddd;" parent="64" vertex="1">
                     <mxGeometry width="140" height="130" as="geometry"/>
                 </mxCell>
-                <mxCell id="66" value="Faculty Management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=16;strokeWidth=2;" vertex="1" parent="64">
+                <mxCell id="66" value="Faculty Management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=16;strokeWidth=2;" parent="64" vertex="1">
                     <mxGeometry x="10" y="10" width="120" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="67" value="Student Management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=16;strokeWidth=2;" vertex="1" parent="64">
+                <mxCell id="67" value="Student Management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=16;strokeWidth=2;" parent="64" vertex="1">
                     <mxGeometry x="10" y="50" width="120" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="68" value="Facilities Management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=16;strokeWidth=2;" vertex="1" parent="64">
+                <mxCell id="68" value="Facilities Management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=16;strokeWidth=2;" parent="64" vertex="1">
                     <mxGeometry x="10" y="90" width="120" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="69" value="" style="group" vertex="1" connectable="0" parent="1">
+                <mxCell id="69" value="" style="group" parent="1" vertex="1" connectable="0">
                     <mxGeometry x="970" y="600" width="140" height="130" as="geometry"/>
                 </mxCell>
-                <mxCell id="70" value="City Campus 4" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.patternFillRect;fillStyle=diagGrid;step=5;fillStrokeWidth=0.2;fillStrokeColor=#dddddd;" vertex="1" parent="69">
+                <mxCell id="70" value="City Campus 4" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.patternFillRect;fillStyle=diagGrid;step=5;fillStrokeWidth=0.2;fillStrokeColor=#dddddd;" parent="69" vertex="1">
                     <mxGeometry width="140" height="130" as="geometry"/>
                 </mxCell>
-                <mxCell id="71" value="Faculty Management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=16;strokeWidth=2;" vertex="1" parent="69">
+                <mxCell id="71" value="Faculty Management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=16;strokeWidth=2;" parent="69" vertex="1">
                     <mxGeometry x="10" y="10" width="120" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="72" value="Student Management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=16;strokeWidth=2;" vertex="1" parent="69">
+                <mxCell id="72" value="Student Management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=16;strokeWidth=2;" parent="69" vertex="1">
                     <mxGeometry x="10" y="50" width="120" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="73" value="Facilities Management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=16;strokeWidth=2;" vertex="1" parent="69">
+                <mxCell id="73" value="Facilities Management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=16;strokeWidth=2;" parent="69" vertex="1">
                     <mxGeometry x="10" y="90" width="120" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="74" style="edgeStyle=none;html=1;exitX=0.968;exitY=0.109;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" source="78" target="79" parent="1">
+                <mxCell id="74" style="edgeStyle=none;html=1;exitX=0.968;exitY=0.109;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="78" target="79" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="75" style="edgeStyle=none;html=1;exitX=1;exitY=0.359;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" target="80" parent="1">
+                <mxCell id="75" style="edgeStyle=none;html=1;exitX=1;exitY=0.359;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="80" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="1330" y="409.76" as="sourcePoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="77" style="edgeStyle=none;html=1;exitX=0.944;exitY=0.916;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.008;entryY=0.546;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" source="78" target="82" parent="1">
+                <mxCell id="77" style="edgeStyle=none;html=1;exitX=0.944;exitY=0.916;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.008;entryY=0.546;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="78" target="82" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="78" value="DATA WAREHOUSE" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" vertex="1" parent="1">
+                <mxCell id="78" value="DATA WAREHOUSE" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" parent="1" vertex="1">
                     <mxGeometry x="1150" y="90" width="180" height="640" as="geometry"/>
                 </mxCell>
-                <mxCell id="79" value="Data Mart quản lý khoa liên trường" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" vertex="1" parent="1">
+                <mxCell id="79" value="Data Mart quản lý khoa liên trường" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" parent="1" vertex="1">
                     <mxGeometry x="1380" y="90" width="150" height="140" as="geometry"/>
                 </mxCell>
-                <mxCell id="80" value="Data Mart quản lý sinh viên liên trường" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" vertex="1" parent="1">
+                <mxCell id="80" value="Data Mart quản lý sinh viên liên trường" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" parent="1" vertex="1">
                     <mxGeometry x="1380" y="340" width="150" height="140" as="geometry"/>
                 </mxCell>
-                <mxCell id="82" value="Data Mart quản lý cơ sở vật chất liên trường" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" vertex="1" parent="1">
+                <mxCell id="82" value="Data Mart quản lý cơ sở vật chất liên trường" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" parent="1" vertex="1">
                     <mxGeometry x="1380" y="600" width="150" height="140" as="geometry"/>
                 </mxCell>
-                <mxCell id="83" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.836;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" source="71" target="78" parent="1">
+                <mxCell id="83" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.836;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="71" target="78" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="84" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.056;entryY=0.898;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" source="72" target="78" parent="1">
+                <mxCell id="84" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.056;entryY=0.898;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="72" target="78" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="85" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.171;entryY=0.961;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" source="73" target="78" parent="1">
+                <mxCell id="85" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.171;entryY=0.961;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="73" target="78" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="86" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.006;entryY=0.695;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" source="68" target="78" parent="1">
+                <mxCell id="86" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.006;entryY=0.695;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="68" target="78" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="1160" y="535" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="87" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.008;entryY=0.633;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" source="67" target="78" parent="1">
+                <mxCell id="87" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.008;entryY=0.633;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="67" target="78" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="88" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.57;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" source="66" target="78" parent="1">
+                <mxCell id="88" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.57;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="66" target="78" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="89" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.43;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" source="63" target="78" parent="1">
+                <mxCell id="89" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.43;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="63" target="78" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="1120" y="390" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="90" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.01;entryY=0.368;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" source="62" target="78" parent="1">
+                <mxCell id="90" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.01;entryY=0.368;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="62" target="78" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="91" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.001;entryY=0.305;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" source="61" target="78" parent="1">
+                <mxCell id="91" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.001;entryY=0.305;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="61" target="78" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="92" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.008;entryY=0.165;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" source="58" target="78" parent="1">
+                <mxCell id="92" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.008;entryY=0.165;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="58" target="78" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="93" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.038;entryY=0.102;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" source="57" target="78" parent="1">
+                <mxCell id="93" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.038;entryY=0.102;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="57" target="78" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="94" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.179;entryY=0.039;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" source="56" target="78" parent="1">
+                <mxCell id="94" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.179;entryY=0.039;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="56" target="78" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="1140" y="100" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="95" value="Các data-marts để phân tích các dữ liệu theo từng lĩnh vực quản lý" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=19;fontColor=#0000FF;labelBorderColor=none;" vertex="1" parent="1">
+                <mxCell id="95" value="Các data-marts để phân tích các dữ liệu theo từng lĩnh vực quản lý" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=19;fontColor=#0000FF;labelBorderColor=none;" parent="1" vertex="1">
                     <mxGeometry x="905" y="15" width="590" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="96" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;Đối với các Data Mart dựa vào các lĩnh vực quản lý:&lt;/span&gt;&lt;br style=&quot;border-color: var(--border-color); font-size: 14px;&quot;&gt;&lt;div style=&quot;border-color: var(--border-color); font-size: 14px;&quot;&gt;&lt;span style=&quot;background-color: initial; font-size: 14px;&quot;&gt;- Các quản trị viên hệ thống trường tổng chịu trách nhiệm mỗi lĩnh vực quản lý. ví dụ: quản lý khoa, quản lý sinh viên, quản lý cơ sở vật chất,... sẵn sàng truy cập đến các dữ liệu liên quan lĩnh vực của họ với tác động tối thiểu trên các lĩnh vực khác&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color); font-size: 14px;&quot;&gt;&lt;span style=&quot;background-color: initial; font-size: 14px;&quot;&gt;- Mỗi dữ liệu về lĩnh vực cụ thể có thể tùy chỉnh và mở rộng cho cá nhân nào có nhu cầu riêng lẻ của lĩnh vực đó&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color); font-size: 14px;&quot;&gt;&lt;span style=&quot;background-color: initial; font-size: 14px;&quot;&gt;- Bất kỳ phân tích rộng hơn có thể&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;strokeColor=none;fillColor=none;align=left;fontSize=14;" vertex="1" parent="1">
+                <mxCell id="96" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;Đối với các Data Mart dựa vào các lĩnh vực quản lý:&lt;/span&gt;&lt;br style=&quot;border-color: var(--border-color); font-size: 14px;&quot;&gt;&lt;div style=&quot;border-color: var(--border-color); font-size: 14px;&quot;&gt;&lt;span style=&quot;background-color: initial; font-size: 14px;&quot;&gt;- Các quản trị viên tổng hệ thống chịu trách nhiệm mỗi lĩnh vực quản lý. ví dụ: quản lý khoa, quản lý sinh viên, quản lý cơ sở vật chất,... sẵn sàng truy cập đến các dữ liệu liên quan lĩnh vực của họ với tác động tối thiểu trên các lĩnh vực khác&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color); font-size: 14px;&quot;&gt;&lt;span style=&quot;background-color: initial; font-size: 14px;&quot;&gt;- Mỗi dữ liệu về lĩnh vực cụ thể có thể tùy chỉnh và mở rộng cho cá nhân nào có nhu cầu riêng lẻ của lĩnh vực đó&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color); font-size: 14px;&quot;&gt;&lt;span style=&quot;background-color: initial; font-size: 14px;&quot;&gt;- Bất kỳ phân tích rộng hơn có thể&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;strokeColor=none;fillColor=none;align=left;fontSize=14;" parent="1" vertex="1">
                     <mxGeometry x="982.5" y="820" width="435" height="180" as="geometry"/>
                 </mxCell>
             </root>

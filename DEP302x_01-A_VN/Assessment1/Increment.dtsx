@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="154"
-  DTS:VersionGUID="{433AC967-A2FA-49AF-B4DF-7574D5997780}">
+  DTS:VersionBuild="156"
+  DTS:VersionGUID="{7ABB261A-CCB5-43E1-A784-3A84D97BC43B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,12 +25,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=dep302ssis.clhfzbeh6hge.ap-southeast-1.rds.amazonaws.com;User ID=admin;Initial Catalog=asm1-petfinder;Provider=MSOLEDBSQL.1;Persist Security Info=True;Auto Translate=False;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAZSHV8zLMxUakzxyeRnWKEgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAApvq9++pkFLdcwRwl6HoWEAAAAAASAAACgAAAAEAAAALR1jxYZ+M7fqXv1ucd08g4YAAAAlUG9YX8kNSUNGsh7Rt4VMookl266VxNwFAAAAHtDt0eRA+lTw1hgNSHsYfFfCI/J</DTS:Password>
-        </DTS:ConnectionManager>
+          DTS:ConnectionString="Data Source=.;Initial Catalog=asm1-petfinder;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{0BA7767B-1900-4AD7-A491-DE5B6FECDA91}asm1-petfinder.admin;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -226,12 +221,7 @@
       DTS:ObjectName="PetFinder_CDC">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=dep302ssis.clhfzbeh6hge.ap-southeast-1.rds.amazonaws.com;User ID=admin;Initial Catalog=asm1-petfinder;Application Name=SSIS-Package-{2CD2014C-67FE-4117-A3AA-99543A40F02E}dep302ssis.clhfzbeh6hge.ap-southeast-1.rds.amazonaws.com.asm1-ssis.admin;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAZSHV8zLMxUakzxyeRnWKEgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAQEmUkYGbkqvIv1W3lDb79AAAAAASAAACgAAAAEAAAAPRIMopWfRbOscd2PZ6EOysYAAAABA9jgpjCYPxV0nrPPIwY95OwU4nvMULxFAAAAESxxnt7JI6f5o1cHfnB1FSz2HgL</DTS:Password>
-        </DTS:ConnectionManager>
+          DTS:ConnectionString="Data Source=.;Initial Catalog=asm1-petfinder;Integrated Security=True;Application Name=SSIS-Package-{2CD2014C-67FE-4117-A3AA-99543A40F02E}dep302ssis.clhfzbeh6hge.ap-southeast-1.rds.amazonaws.com.asm1-ssis.admin;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -7455,64 +7445,64 @@ where [refTable].[StateName] = ?</property>
               startId="Package\Pet_Fact Flow\CDC Splitter.Outputs[InsertOutput]" />
             <path
               refId="Package\Pet_Fact Flow.Paths[Lookup Match Output16]"
-              endId="Package\Pet_Fact Flow\OLE DB Command.Inputs[OLE DB Command Input]"
+              endId="Package\Pet_Fact Flow\Color1 Lookup.Inputs[Lookup Input]"
               name="Lookup Match Output"
-              startId="Package\Pet_Fact Flow\State Lookup 1.Outputs[Lookup Match Output]" />
+              startId="Package\Pet_Fact Flow\Gender Lookup.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Pet_Fact Flow.Paths[Lookup Match Output17]"
-              endId="Package\Pet_Fact Flow\FurLength Lookup.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Pet_Fact Flow\MaturitySize Lookup.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Pet_Fact Flow.Paths[Lookup Match Output18]"
-              endId="Package\Pet_Fact Flow\IsVaccinedID Lookup.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Pet_Fact Flow\FurLength Lookup.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Pet_Fact Flow.Paths[Lookup Match Output19]"
-              endId="Package\Pet_Fact Flow\IsDewormedID Lookup.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Pet_Fact Flow\IsVaccinedID Lookup.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Pet_Fact Flow.Paths[Lookup Match Output20]"
-              endId="Package\Pet_Fact Flow\Breed2 Lookup.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Pet_Fact Flow\Breed1 Lookup.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Pet_Fact Flow.Paths[Lookup Match Output21]"
-              endId="Package\Pet_Fact Flow\IsSterilizedID Lookup.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Pet_Fact Flow\IsDewormedID Lookup.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Pet_Fact Flow.Paths[Lookup Match Output22]"
-              endId="Package\Pet_Fact Flow\Color3 Lookup.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Pet_Fact Flow\Color2 Lookup.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Pet_Fact Flow.Paths[Lookup Match Output23]"
-              endId="Package\Pet_Fact Flow\Color2 Lookup.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Pet_Fact Flow\Color1 Lookup.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Pet_Fact Flow.Paths[Lookup Match Output24]"
-              endId="Package\Pet_Fact Flow\Gender Lookup.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Pet_Fact Flow\Breed2 Lookup.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Pet_Fact Flow.Paths[Lookup Match Output25]"
-              endId="Package\Pet_Fact Flow\State Lookup.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Pet_Fact Flow\Health Lookup.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Pet_Fact Flow.Paths[Lookup Match Output26]"
               endId="Package\Pet_Fact Flow\Breed1 Lookup.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\Pet_Fact Flow\PetType Lookup.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Pet_Fact Flow.Paths[Lookup Match Output27]"
-              endId="Package\Pet_Fact Flow\Color1 Lookup.Inputs[Lookup Input]"
+              refId="Package\Pet_Fact Flow.Paths[Lookup Match Output18]"
+              endId="Package\Pet_Fact Flow\State Lookup.Inputs[Lookup Input]"
               name="Lookup Match Output"
-              startId="Package\Pet_Fact Flow\Gender Lookup.Outputs[Lookup Match Output]" />
+              startId="Package\Pet_Fact Flow\Health Lookup.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Pet_Fact Flow.Paths[Lookup Match Output19]"
+              endId="Package\Pet_Fact Flow\Gender Lookup.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Pet_Fact Flow\Breed2 Lookup.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Pet_Fact Flow.Paths[Lookup Match Output20]"
+              endId="Package\Pet_Fact Flow\Color2 Lookup.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Pet_Fact Flow\Color1 Lookup.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Pet_Fact Flow.Paths[Lookup Match Output21]"
+              endId="Package\Pet_Fact Flow\Color3 Lookup.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Pet_Fact Flow\Color2 Lookup.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Pet_Fact Flow.Paths[Lookup Match Output22]"
+              endId="Package\Pet_Fact Flow\IsSterilizedID Lookup.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Pet_Fact Flow\IsDewormedID Lookup.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Pet_Fact Flow.Paths[Lookup Match Output23]"
+              endId="Package\Pet_Fact Flow\Breed2 Lookup.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Pet_Fact Flow\Breed1 Lookup.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Pet_Fact Flow.Paths[Lookup Match Output24]"
+              endId="Package\Pet_Fact Flow\IsDewormedID Lookup.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Pet_Fact Flow\IsVaccinedID Lookup.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Pet_Fact Flow.Paths[Lookup Match Output25]"
+              endId="Package\Pet_Fact Flow\IsVaccinedID Lookup.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Pet_Fact Flow\FurLength Lookup.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Pet_Fact Flow.Paths[Lookup Match Output26]"
+              endId="Package\Pet_Fact Flow\FurLength Lookup.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Pet_Fact Flow\MaturitySize Lookup.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Pet_Fact Flow.Paths[Lookup Match Output27]"
+              endId="Package\Pet_Fact Flow\OLE DB Command.Inputs[OLE DB Command Input]"
+              name="Lookup Match Output"
+              startId="Package\Pet_Fact Flow\State Lookup 1.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Pet_Fact Flow.Paths[Lookup Match Output15]"
               endId="Package\Pet_Fact Flow\MaturitySize Lookup.Inputs[Lookup Input]"
@@ -7535,64 +7525,64 @@ where [refTable].[StateName] = ?</property>
               startId="Package\Pet_Fact Flow\IsDewormedID Lookup 1.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Pet_Fact Flow.Paths[Lookup Match Output11]"
-              endId="Package\Pet_Fact Flow\Health Lookup.Inputs[Lookup Input]"
+              endId="Package\Pet_Fact Flow\Health Lookup 1.Inputs[Lookup Input]"
               name="Lookup Match Output"
-              startId="Package\Pet_Fact Flow\IsSterilizedID Lookup.Outputs[Lookup Match Output]" />
+              startId="Package\Pet_Fact Flow\IsSterilizedID Lookup 1.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Pet_Fact Flow.Paths[Lookup Match Output10]"
-              endId="Package\Pet_Fact Flow\Color1 Lookup 1.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Pet_Fact Flow\Gender Lookup 1.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Pet_Fact Flow.Paths[Lookup Match Output9]"
-              endId="Package\Pet_Fact Flow\Breed1 Lookup 1.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Pet_Fact Flow\PetType Lookup 1.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Pet_Fact Flow.Paths[Lookup Match Output8]"
-              endId="Package\Pet_Fact Flow\State Lookup 1.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Pet_Fact Flow\Health Lookup 1.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Pet_Fact Flow.Paths[Lookup Match Output7]"
-              endId="Package\Pet_Fact Flow\Gender Lookup 1.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Pet_Fact Flow\Breed2 Lookup 1.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Pet_Fact Flow.Paths[Lookup Match Output6]"
-              endId="Package\Pet_Fact Flow\Color2 Lookup 1.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Pet_Fact Flow\Color1 Lookup 1.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Pet_Fact Flow.Paths[Lookup Match Output5]"
-              endId="Package\Pet_Fact Flow\Color3 Lookup 1.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Pet_Fact Flow\Color2 Lookup 1.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Pet_Fact Flow.Paths[Lookup Match Output4]"
-              endId="Package\Pet_Fact Flow\Breed2 Lookup 1.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Pet_Fact Flow\Breed1 Lookup 1.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Pet_Fact Flow.Paths[Lookup Match Output3]"
-              endId="Package\Pet_Fact Flow\IsDewormedID Lookup 1.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Pet_Fact Flow\IsVaccinedID Lookup 1.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Pet_Fact Flow.Paths[Lookup Match Output2]"
-              endId="Package\Pet_Fact Flow\IsVaccinedID Lookup 1.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Pet_Fact Flow\FurLength Lookup 1.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Pet_Fact Flow.Paths[Lookup Match Output1]"
               endId="Package\Pet_Fact Flow\FurLength Lookup 1.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\Pet_Fact Flow\MaturitySize Lookup 1.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Pet_Fact Flow.Paths[Lookup Match Output]"
-              endId="Package\Pet_Fact Flow\Health Lookup 1.Inputs[Lookup Input]"
+              refId="Package\Pet_Fact Flow.Paths[Lookup Match Output9]"
+              endId="Package\Pet_Fact Flow\IsVaccinedID Lookup 1.Inputs[Lookup Input]"
               name="Lookup Match Output"
-              startId="Package\Pet_Fact Flow\IsSterilizedID Lookup 1.Outputs[Lookup Match Output]" />
+              startId="Package\Pet_Fact Flow\FurLength Lookup 1.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Pet_Fact Flow.Paths[Lookup Match Output8]"
+              endId="Package\Pet_Fact Flow\IsDewormedID Lookup 1.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Pet_Fact Flow\IsVaccinedID Lookup 1.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Pet_Fact Flow.Paths[Lookup Match Output7]"
+              endId="Package\Pet_Fact Flow\Breed2 Lookup 1.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Pet_Fact Flow\Breed1 Lookup 1.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Pet_Fact Flow.Paths[Lookup Match Output6]"
+              endId="Package\Pet_Fact Flow\Color3 Lookup 1.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Pet_Fact Flow\Color2 Lookup 1.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Pet_Fact Flow.Paths[Lookup Match Output5]"
+              endId="Package\Pet_Fact Flow\Color2 Lookup 1.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Pet_Fact Flow\Color1 Lookup 1.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Pet_Fact Flow.Paths[Lookup Match Output4]"
+              endId="Package\Pet_Fact Flow\Gender Lookup 1.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Pet_Fact Flow\Breed2 Lookup 1.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Pet_Fact Flow.Paths[Lookup Match Output3]"
+              endId="Package\Pet_Fact Flow\State Lookup 1.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Pet_Fact Flow\Health Lookup 1.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Pet_Fact Flow.Paths[Lookup Match Output2]"
+              endId="Package\Pet_Fact Flow\Breed1 Lookup 1.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Pet_Fact Flow\PetType Lookup 1.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Pet_Fact Flow.Paths[Lookup Match Output1]"
+              endId="Package\Pet_Fact Flow\Color1 Lookup 1.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Pet_Fact Flow\Gender Lookup 1.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Pet_Fact Flow.Paths[Lookup Match Output]"
+              endId="Package\Pet_Fact Flow\Health Lookup.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Pet_Fact Flow\IsSterilizedID Lookup.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Pet_Fact Flow.Paths[Output]"
               endId="Package\Pet_Fact Flow\CDC Splitter.Inputs[Input]"
@@ -11328,32 +11318,32 @@ where [refTable].[ColorName] = ?</property>
                   name="Lookup No Match Output"
                   startId="Package\Sequence Container\Color_DIM Flow\Lookup.Outputs[Lookup No Match Output]" />
                 <path
-                  refId="Package\Sequence Container\Color_DIM Flow.Paths[Multicast Output 11]"
+                  refId="Package\Sequence Container\Color_DIM Flow.Paths[Multicast Output 1]"
                   endId="Package\Sequence Container\Color_DIM Flow\Sort 1 1.Inputs[Sort Input]"
                   name="Multicast Output 1"
                   startId="Package\Sequence Container\Color_DIM Flow\Multicast to update.Outputs[Multicast Output 1]" />
                 <path
-                  refId="Package\Sequence Container\Color_DIM Flow.Paths[Multicast Output 1]"
+                  refId="Package\Sequence Container\Color_DIM Flow.Paths[Multicast Output 11]"
                   endId="Package\Sequence Container\Color_DIM Flow\Sort 1.Inputs[Sort Input]"
                   name="Multicast Output 1"
                   startId="Package\Sequence Container\Color_DIM Flow\Multicast to insert.Outputs[Multicast Output 1]" />
                 <path
-                  refId="Package\Sequence Container\Color_DIM Flow.Paths[Multicast Output 21]"
+                  refId="Package\Sequence Container\Color_DIM Flow.Paths[Multicast Output 2]"
                   endId="Package\Sequence Container\Color_DIM Flow\Sort 2 1.Inputs[Sort Input]"
                   name="Multicast Output 2"
                   startId="Package\Sequence Container\Color_DIM Flow\Multicast to update.Outputs[Multicast Output 2]" />
                 <path
-                  refId="Package\Sequence Container\Color_DIM Flow.Paths[Multicast Output 2]"
+                  refId="Package\Sequence Container\Color_DIM Flow.Paths[Multicast Output 21]"
                   endId="Package\Sequence Container\Color_DIM Flow\Sort 2.Inputs[Sort Input]"
                   name="Multicast Output 2"
                   startId="Package\Sequence Container\Color_DIM Flow\Multicast to insert.Outputs[Multicast Output 2]" />
                 <path
-                  refId="Package\Sequence Container\Color_DIM Flow.Paths[Multicast Output 31]"
+                  refId="Package\Sequence Container\Color_DIM Flow.Paths[Multicast Output 3]"
                   endId="Package\Sequence Container\Color_DIM Flow\Sort3 1.Inputs[Sort Input]"
                   name="Multicast Output 3"
                   startId="Package\Sequence Container\Color_DIM Flow\Multicast to update.Outputs[Multicast Output 3]" />
                 <path
-                  refId="Package\Sequence Container\Color_DIM Flow.Paths[Multicast Output 3]"
+                  refId="Package\Sequence Container\Color_DIM Flow.Paths[Multicast Output 31]"
                   endId="Package\Sequence Container\Color_DIM Flow\Sort3.Inputs[Sort Input]"
                   name="Multicast Output 3"
                   startId="Package\Sequence Container\Color_DIM Flow\Multicast to insert.Outputs[Multicast Output 3]" />
@@ -11363,22 +11353,22 @@ where [refTable].[ColorName] = ?</property>
                   name="Output"
                   startId="Package\Sequence Container\Color_DIM Flow\CDC Source Color1.Outputs[Output]" />
                 <path
-                  refId="Package\Sequence Container\Color_DIM Flow.Paths[Sort Output5]"
+                  refId="Package\Sequence Container\Color_DIM Flow.Paths[Sort Output]"
                   endId="Package\Sequence Container\Color_DIM Flow\Union All.Inputs[Union All Input 5]"
                   name="Sort Output"
                   startId="Package\Sequence Container\Color_DIM Flow\Sort 2 1.Outputs[Sort Output]" />
                 <path
-                  refId="Package\Sequence Container\Color_DIM Flow.Paths[Sort Output2]"
+                  refId="Package\Sequence Container\Color_DIM Flow.Paths[Sort Output1]"
                   endId="Package\Sequence Container\Color_DIM Flow\Union All.Inputs[Union All Input 1]"
                   name="Sort Output"
                   startId="Package\Sequence Container\Color_DIM Flow\Sort 2.Outputs[Sort Output]" />
                 <path
-                  refId="Package\Sequence Container\Color_DIM Flow.Paths[Sort Output3]"
+                  refId="Package\Sequence Container\Color_DIM Flow.Paths[Sort Output2]"
                   endId="Package\Sequence Container\Color_DIM Flow\Union All.Inputs[Union All Input 2]"
                   name="Sort Output"
                   startId="Package\Sequence Container\Color_DIM Flow\Sort3.Outputs[Sort Output]" />
                 <path
-                  refId="Package\Sequence Container\Color_DIM Flow.Paths[Sort Output]"
+                  refId="Package\Sequence Container\Color_DIM Flow.Paths[Sort Output3]"
                   endId="Package\Sequence Container\Color_DIM Flow\Data Conversion.Inputs[Data Conversion Input]"
                   name="Sort Output"
                   startId="Package\Sequence Container\Color_DIM Flow\Sort.Outputs[Sort Output]" />
@@ -11388,7 +11378,7 @@ where [refTable].[ColorName] = ?</property>
                   name="Sort Output"
                   startId="Package\Sequence Container\Color_DIM Flow\Sort 1 1.Outputs[Sort Output]" />
                 <path
-                  refId="Package\Sequence Container\Color_DIM Flow.Paths[Sort Output1]"
+                  refId="Package\Sequence Container\Color_DIM Flow.Paths[Sort Output5]"
                   endId="Package\Sequence Container\Color_DIM Flow\Union All.Inputs[Union All Input 3]"
                   name="Sort Output"
                   startId="Package\Sequence Container\Color_DIM Flow\Sort 1.Outputs[Sort Output]" />
@@ -13351,12 +13341,12 @@ where [refTable].[ConfirmationName] = ?</property>
                   name="Multicast Output 2"
                   startId="Package\Sequence Container\Confirmation_DIM Flow\Multicast to update.Outputs[Multicast Output 2]" />
                 <path
-                  refId="Package\Sequence Container\Confirmation_DIM Flow.Paths[Multicast Output 31]"
+                  refId="Package\Sequence Container\Confirmation_DIM Flow.Paths[Multicast Output 3]"
                   endId="Package\Sequence Container\Confirmation_DIM Flow\Sort Sterilized 1.Inputs[Sort Input]"
                   name="Multicast Output 3"
                   startId="Package\Sequence Container\Confirmation_DIM Flow\Multicast to update.Outputs[Multicast Output 3]" />
                 <path
-                  refId="Package\Sequence Container\Confirmation_DIM Flow.Paths[Multicast Output 3]"
+                  refId="Package\Sequence Container\Confirmation_DIM Flow.Paths[Multicast Output 31]"
                   endId="Package\Sequence Container\Confirmation_DIM Flow\Sort Sterilized.Inputs[Sort Input]"
                   name="Multicast Output 3"
                   startId="Package\Sequence Container\Confirmation_DIM Flow\Multicast to insert.Outputs[Multicast Output 3]" />
@@ -13366,7 +13356,7 @@ where [refTable].[ConfirmationName] = ?</property>
                   name="Output"
                   startId="Package\Sequence Container\Confirmation_DIM Flow\CDC Source.Outputs[Output]" />
                 <path
-                  refId="Package\Sequence Container\Confirmation_DIM Flow.Paths[Sort Output4]"
+                  refId="Package\Sequence Container\Confirmation_DIM Flow.Paths[Sort Output]"
                   endId="Package\Sequence Container\Confirmation_DIM Flow\Union All.Inputs[Union All Input 4]"
                   name="Sort Output"
                   startId="Package\Sequence Container\Confirmation_DIM Flow\Sort Vaccined 1.Outputs[Sort Output]" />
@@ -13381,17 +13371,17 @@ where [refTable].[ConfirmationName] = ?</property>
                   name="Sort Output"
                   startId="Package\Sequence Container\Confirmation_DIM Flow\Sort Dewormed.Outputs[Sort Output]" />
                 <path
-                  refId="Package\Sequence Container\Confirmation_DIM Flow.Paths[Sort Output5]"
+                  refId="Package\Sequence Container\Confirmation_DIM Flow.Paths[Sort Output3]"
                   endId="Package\Sequence Container\Confirmation_DIM Flow\Union All.Inputs[Union All Input 5]"
                   name="Sort Output"
                   startId="Package\Sequence Container\Confirmation_DIM Flow\Sort Dewormed 1.Outputs[Sort Output]" />
                 <path
-                  refId="Package\Sequence Container\Confirmation_DIM Flow.Paths[Sort Output]"
+                  refId="Package\Sequence Container\Confirmation_DIM Flow.Paths[Sort Output4]"
                   endId="Package\Sequence Container\Confirmation_DIM Flow\Data Conversion.Inputs[Data Conversion Input]"
                   name="Sort Output"
                   startId="Package\Sequence Container\Confirmation_DIM Flow\Sort.Outputs[Sort Output]" />
                 <path
-                  refId="Package\Sequence Container\Confirmation_DIM Flow.Paths[Sort Output3]"
+                  refId="Package\Sequence Container\Confirmation_DIM Flow.Paths[Sort Output5]"
                   endId="Package\Sequence Container\Confirmation_DIM Flow\Union All.Inputs[Union All Input 2]"
                   name="Sort Output"
                   startId="Package\Sequence Container\Confirmation_DIM Flow\Sort Sterilized.Outputs[Sort Output]" />
@@ -22398,7 +22388,7 @@ where [refTable].[StateName] = ?</property>
         <NodeLayout
           Size="271.2,41.6"
           Id="Package\CDC Control Task - Get processing range"
-          TopLeft="211.061901360065,212.799999566079" />
+          TopLeft="211.061901360065,215.399999547999" />
         <NodeLayout
           Size="274.4,41.6"
           Id="Package\CDC Control Task - Mark processed range"
@@ -22449,21 +22439,21 @@ where [refTable].[StateName] = ?</property>
           PanelSize="556.8,197.6"
           Size="556.8,240.8"
           Id="Package\Sequence Container"
-          TopLeft="60.95237762209,316.92380749798" />
+          TopLeft="60.95237762209,318.65714081926" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="339.368245009424,557.72380749798">
+          TopLeft="339.368245009424,559.45714081926">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,24.3825404865296"
+              EndConnector="0,22.6492071652499"
               Start="0,0"
-              End="0,16.8825404865296">
+              End="0,15.1492071652499">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,16.8825404865296" />
+                    End="0,15.1492071652499" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -22474,18 +22464,18 @@ where [refTable].[StateName] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="343.007139491078,254.399999566079">
+          TopLeft="343.007139491078,256.999999547999">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,62.5238079319011"
+              EndConnector="0,61.6571412712611"
               Start="0,0"
-              End="0,55.0238079319011">
+              End="0,54.1571412712611">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,55.0238079319011" />
+                    End="0,54.1571412712611" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -22731,7 +22721,7 @@ where [refTable].[StateName] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Pet_Fact Flow.Paths[Lookup Match Output27]"
+          Id="Package\Pet_Fact Flow.Paths[Lookup Match Output16]"
           TopLeft="234.1,656.700000000002">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -22755,7 +22745,7 @@ where [refTable].[StateName] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Pet_Fact Flow.Paths[Lookup Match Output26]"
+          Id="Package\Pet_Fact Flow.Paths[Lookup Match Output17]"
           TopLeft="234.1,351.900000000001">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -22779,7 +22769,7 @@ where [refTable].[StateName] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Pet_Fact Flow.Paths[Lookup Match Output25]"
+          Id="Package\Pet_Fact Flow.Paths[Lookup Match Output18]"
           TopLeft="234.1,1571.1">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -22803,7 +22793,7 @@ where [refTable].[StateName] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Pet_Fact Flow.Paths[Lookup Match Output24]"
+          Id="Package\Pet_Fact Flow.Paths[Lookup Match Output19]"
           TopLeft="234.1,555.100000000002">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -22827,7 +22817,7 @@ where [refTable].[StateName] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Pet_Fact Flow.Paths[Lookup Match Output23]"
+          Id="Package\Pet_Fact Flow.Paths[Lookup Match Output20]"
           TopLeft="234.1,758.300000000003">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -22851,7 +22841,7 @@ where [refTable].[StateName] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Pet_Fact Flow.Paths[Lookup Match Output22]"
+          Id="Package\Pet_Fact Flow.Paths[Lookup Match Output21]"
           TopLeft="234.1,859.900000000003">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -22875,7 +22865,7 @@ where [refTable].[StateName] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Pet_Fact Flow.Paths[Lookup Match Output21]"
+          Id="Package\Pet_Fact Flow.Paths[Lookup Match Output22]"
           TopLeft="234.1,1367.9">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -22899,7 +22889,7 @@ where [refTable].[StateName] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Pet_Fact Flow.Paths[Lookup Match Output20]"
+          Id="Package\Pet_Fact Flow.Paths[Lookup Match Output23]"
           TopLeft="234.1,453.500000000002">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -22923,7 +22913,7 @@ where [refTable].[StateName] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Pet_Fact Flow.Paths[Lookup Match Output19]"
+          Id="Package\Pet_Fact Flow.Paths[Lookup Match Output24]"
           TopLeft="234.1,1266.3">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -22947,7 +22937,7 @@ where [refTable].[StateName] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Pet_Fact Flow.Paths[Lookup Match Output18]"
+          Id="Package\Pet_Fact Flow.Paths[Lookup Match Output25]"
           TopLeft="234.1,1164.7">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -22971,7 +22961,7 @@ where [refTable].[StateName] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Pet_Fact Flow.Paths[Lookup Match Output17]"
+          Id="Package\Pet_Fact Flow.Paths[Lookup Match Output26]"
           TopLeft="234.1,1063.1">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -22995,7 +22985,7 @@ where [refTable].[StateName] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Pet_Fact Flow.Paths[Lookup Match Output16]"
+          Id="Package\Pet_Fact Flow.Paths[Lookup Match Output27]"
           TopLeft="505.333310749797,1664.19999860784">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23139,7 +23129,7 @@ where [refTable].[StateName] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Pet_Fact Flow.Paths[Lookup Match Output11]"
+          Id="Package\Pet_Fact Flow.Paths[Lookup Match Output]"
           TopLeft="234.1,1469.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23163,7 +23153,7 @@ where [refTable].[StateName] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Pet_Fact Flow.Paths[Lookup Match Output10]"
+          Id="Package\Pet_Fact Flow.Paths[Lookup Match Output1]"
           TopLeft="505.333310749796,648.199998607837">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23187,7 +23177,7 @@ where [refTable].[StateName] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Pet_Fact Flow.Paths[Lookup Match Output9]"
+          Id="Package\Pet_Fact Flow.Paths[Lookup Match Output2]"
           TopLeft="505.333310749796,343.399998607834">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23211,7 +23201,7 @@ where [refTable].[StateName] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Pet_Fact Flow.Paths[Lookup Match Output8]"
+          Id="Package\Pet_Fact Flow.Paths[Lookup Match Output3]"
           TopLeft="505.333310749797,1562.59999860784">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23235,7 +23225,7 @@ where [refTable].[StateName] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Pet_Fact Flow.Paths[Lookup Match Output7]"
+          Id="Package\Pet_Fact Flow.Paths[Lookup Match Output4]"
           TopLeft="505.333310749796,546.599998607836">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23259,7 +23249,7 @@ where [refTable].[StateName] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Pet_Fact Flow.Paths[Lookup Match Output6]"
+          Id="Package\Pet_Fact Flow.Paths[Lookup Match Output5]"
           TopLeft="505.333310749796,749.799998607837">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23283,7 +23273,7 @@ where [refTable].[StateName] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Pet_Fact Flow.Paths[Lookup Match Output5]"
+          Id="Package\Pet_Fact Flow.Paths[Lookup Match Output6]"
           TopLeft="505.333310749796,851.399998607837">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23307,7 +23297,7 @@ where [refTable].[StateName] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Pet_Fact Flow.Paths[Lookup Match Output4]"
+          Id="Package\Pet_Fact Flow.Paths[Lookup Match Output7]"
           TopLeft="505.333310749796,444.999998607835">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23331,7 +23321,7 @@ where [refTable].[StateName] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Pet_Fact Flow.Paths[Lookup Match Output3]"
+          Id="Package\Pet_Fact Flow.Paths[Lookup Match Output8]"
           TopLeft="505.333310749797,1257.79999860784">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23355,7 +23345,7 @@ where [refTable].[StateName] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Pet_Fact Flow.Paths[Lookup Match Output2]"
+          Id="Package\Pet_Fact Flow.Paths[Lookup Match Output9]"
           TopLeft="505.333310749796,1156.19999860784">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23379,7 +23369,7 @@ where [refTable].[StateName] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Pet_Fact Flow.Paths[Lookup Match Output1]"
+          Id="Package\Pet_Fact Flow.Paths[Lookup Match Output10]"
           TopLeft="505.333310749796,1054.59999860784">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23403,7 +23393,7 @@ where [refTable].[StateName] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Pet_Fact Flow.Paths[Lookup Match Output]"
+          Id="Package\Pet_Fact Flow.Paths[Lookup Match Output11]"
           TopLeft="505.333310749797,1460.99999860784">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -24419,27 +24409,6 @@ where [refTable].[StateName] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container\Breed_DIM Flow\CDC Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container\Breed_DIM Flow\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Sequence Container\Breed_DIM Flow\Lookup">
     <Properties>
       <Property>
@@ -24458,7 +24427,28 @@ where [refTable].[StateName] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q4:boolean">false</Value>
+          type="q4:string">false</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\Breed_DIM Flow\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\Breed_DIM Flow\CDC Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -24576,7 +24566,7 @@ where [refTable].[StateName] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Sequence Container\Color_DIM Flow.Paths[Sort Output]"
+          Id="Package\Sequence Container\Color_DIM Flow.Paths[Sort Output3]"
           TopLeft="408.316654755258,512.333327109086">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -24632,7 +24622,7 @@ where [refTable].[StateName] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Sequence Container\Color_DIM Flow.Paths[Sort Output1]"
+          Id="Package\Sequence Container\Color_DIM Flow.Paths[Sort Output5]"
           TopLeft="139.533328338133,311.466664098634">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -24706,7 +24696,7 @@ where [refTable].[StateName] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Sequence Container\Color_DIM Flow.Paths[Multicast Output 1]"
+          Id="Package\Sequence Container\Color_DIM Flow.Paths[Multicast Output 11]"
           TopLeft="256.266657014026,198.799999602238">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -24740,7 +24730,7 @@ where [refTable].[StateName] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Sequence Container\Color_DIM Flow.Paths[Multicast Output 2]"
+          Id="Package\Sequence Container\Color_DIM Flow.Paths[Multicast Output 21]"
           TopLeft="281.466657014026,198.799999602238">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -24774,7 +24764,7 @@ where [refTable].[StateName] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Sequence Container\Color_DIM Flow.Paths[Multicast Output 3]"
+          Id="Package\Sequence Container\Color_DIM Flow.Paths[Multicast Output 31]"
           TopLeft="294.066657014026,198.799999602238">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -24808,7 +24798,7 @@ where [refTable].[StateName] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Sequence Container\Color_DIM Flow.Paths[Sort Output2]"
+          Id="Package\Sequence Container\Color_DIM Flow.Paths[Sort Output1]"
           TopLeft="255.700004433095,312.133329894411">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -24842,7 +24832,7 @@ where [refTable].[StateName] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Sequence Container\Color_DIM Flow.Paths[Sort Output3]"
+          Id="Package\Sequence Container\Color_DIM Flow.Paths[Sort Output2]"
           TopLeft="369.433333928551,313.466666764552">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -24922,7 +24912,7 @@ where [refTable].[StateName] = ?</property>
           Id="Package\Sequence Container\Color_DIM Flow\Sort 1 1"
           TopLeft="489.999973227582,266.19999994576" />
         <EdgeLayout
-          Id="Package\Sequence Container\Color_DIM Flow.Paths[Multicast Output 11]"
+          Id="Package\Sequence Container\Color_DIM Flow.Paths[Multicast Output 1]"
           TopLeft="630.29997008592,197.599998915195">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -24956,7 +24946,7 @@ where [refTable].[StateName] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Sequence Container\Color_DIM Flow.Paths[Multicast Output 21]"
+          Id="Package\Sequence Container\Color_DIM Flow.Paths[Multicast Output 2]"
           TopLeft="657.966643037565,197.599998915195">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -24978,7 +24968,7 @@ where [refTable].[StateName] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Sequence Container\Color_DIM Flow.Paths[Multicast Output 31]"
+          Id="Package\Sequence Container\Color_DIM Flow.Paths[Multicast Output 3]"
           TopLeft="669.699970085921,197.599998915195">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -25046,7 +25036,7 @@ where [refTable].[StateName] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Sequence Container\Color_DIM Flow.Paths[Sort Output5]"
+          Id="Package\Sequence Container\Color_DIM Flow.Paths[Sort Output]"
           TopLeft="659.366649322543,308.466665741537">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -25117,19 +25107,6 @@ where [refTable].[StateName] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container\Color_DIM Flow\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Sequence Container\Color_DIM Flow\Lookup">
     <Properties>
       <Property>
@@ -25148,7 +25125,20 @@ where [refTable].[StateName] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q4:boolean">false</Value>
+          type="q4:string">false</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\Color_DIM Flow\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -25266,7 +25256,7 @@ where [refTable].[StateName] = ?</property>
           Id="Package\Sequence Container\Confirmation_DIM Flow\Data Conversion"
           TopLeft="461.249993126839,576.1499971129" />
         <EdgeLayout
-          Id="Package\Sequence Container\Confirmation_DIM Flow.Paths[Sort Output]"
+          Id="Package\Sequence Container\Confirmation_DIM Flow.Paths[Sort Output4]"
           TopLeft="539.524992905184,538.299993540346">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -25418,7 +25408,7 @@ where [refTable].[StateName] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Sequence Container\Confirmation_DIM Flow.Paths[Multicast Output 3]"
+          Id="Package\Sequence Container\Confirmation_DIM Flow.Paths[Multicast Output 31]"
           TopLeft="436.899995321035,234.099997213483">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -25520,7 +25510,7 @@ where [refTable].[StateName] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Sequence Container\Confirmation_DIM Flow.Paths[Sort Output3]"
+          Id="Package\Sequence Container\Confirmation_DIM Flow.Paths[Sort Output5]"
           TopLeft="502.933321607775,331.133332629668">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -25674,7 +25664,7 @@ where [refTable].[StateName] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Sequence Container\Confirmation_DIM Flow.Paths[Multicast Output 31]"
+          Id="Package\Sequence Container\Confirmation_DIM Flow.Paths[Multicast Output 3]"
           TopLeft="831.199989435077,239.59999704957">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -25708,7 +25698,7 @@ where [refTable].[StateName] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Sequence Container\Confirmation_DIM Flow.Paths[Sort Output4]"
+          Id="Package\Sequence Container\Confirmation_DIM Flow.Paths[Sort Output]"
           TopLeft="656.449985408039,331.616663103782">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -25742,7 +25732,7 @@ where [refTable].[StateName] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Sequence Container\Confirmation_DIM Flow.Paths[Sort Output5]"
+          Id="Package\Sequence Container\Confirmation_DIM Flow.Paths[Sort Output3]"
           TopLeft="808.299989457429,335.233328896927">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -25813,19 +25803,6 @@ where [refTable].[StateName] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container\Confirmation_DIM Flow\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Sequence Container\Confirmation_DIM Flow\Lookup">
     <Properties>
       <Property>
@@ -25844,7 +25821,20 @@ where [refTable].[StateName] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q4:boolean">false</Value>
+          type="q4:string">false</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\Confirmation_DIM Flow\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -26834,7 +26824,7 @@ where [refTable].[StateName] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q4:boolean">false</Value>
+          type="q4:string">false</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -27155,7 +27145,7 @@ where [refTable].[StateName] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>

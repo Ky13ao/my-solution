@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="94"
-  DTS:VersionGUID="{AFAEF466-0732-4FD0-A045-E11A038FF8D0}">
+  DTS:VersionBuild="100"
+  DTS:VersionGUID="{A1B726A1-2607-484E-8E33-3339677C2EBA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -110,40 +110,6 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[lab2.admin]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{3D3B4412-7A82-46BB-BF36-83C8302DD7C7}"
-      DTS:ObjectName="lab2.admin">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=dep302ssis.clhfzbeh6hge.ap-southeast-1.rds.amazonaws.com;User ID=admin;Initial Catalog=lab2-ssis;Provider=MSOLEDBSQL.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-Package-{3D3B4412-7A82-46BB-BF36-83C8302DD7C7}lab2.admin;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0nGJg80pfUSIbzsLvB3nAQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADB/Qkf6Kx+Jl62D2hXQKL+AAAAAASAAACgAAAAEAAAAGZUBXBf2FX+dApPg7Alwm4YAAAAPVV5YgvNqcljVUmF3qjom4kJr3ol+YK1FAAAAFJXsfKKQNhjiQAAV0MYmU+14o/U</DTS:Password>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[lab3.admin]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{8bc9dc3d-c973-4dbd-abd5-e35386b2d887}"
-      DTS:ObjectName="lab3.admin">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=dep302ssis.clhfzbeh6hge.ap-southeast-1.rds.amazonaws.com;User ID=admin;Initial Catalog=lab3-ssis;Provider=MSOLEDBSQL.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-Package-{3D3B4412-7A82-46BB-BF36-83C8302DD7C7}lab2.admin;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0nGJg80pfUSIbzsLvB3nAQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAeYmHhCUR0DiRP8a37uv9FAAAAAASAAACgAAAAEAAAACgwvSwBJhigabiAMSoXciEYAAAAGvLM/dp3KTBHHireif0IyuoWVvqkwOIEFAAAAGOMDT1kdHERY0AyN35bbIwez7O9</DTS:Password>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[lab5.admin]"
       DTS:CreationName="OLEDB"
       DTS:DTSID="{a371ddba-cd13-49df-8d39-905add17ba1d}"
@@ -156,7 +122,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0nGJg80pfUSIbzsLvB3nAQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABCBOYOd27pYaHNcvyDOjLUAAAAAASAAACgAAAAEAAAANC8RUTrpTo2g65rGk0Nm7YYAAAAlimirLtG0t+G91UnKrL6BqDW+MKXX1jqFAAAACYaejkCOgcfIRJo34Bd8Of5LpWM</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAZSHV8zLMxUakzxyeRnWKEgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACiV5a4Hi23FxeMxVIazKUBAAAAAASAAACgAAAAEAAAAMMevHm6iw/OO/Nzb6yQr2AYAAAAHNCm0ta3iDXUljP8id6JHaO734Vkzom/FAAAAKYFvTgd6eQ18tOAWZiWrO47xqLp</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -173,8 +139,32 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0nGJg80pfUSIbzsLvB3nAQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABk20EO3l2VTG/HLbUlFqpOAAAAAASAAACgAAAAEAAAAB7B9CjFtngovIiTAnyxCBgYAAAAwLDVp2nd2oy7OuLec+3cl46nI5YaXR01FAAAAIMx2C2K/F/IXLXmAJaTJVC9B++E</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAZSHV8zLMxUakzxyeRnWKEgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAB74ReuYwcydUR+1LRO8lVQAAAAAASAAACgAAAAEAAAANLUXlYOs3oZdrmaDJPSLN0YAAAAtZfx77xjHV63nt16L3wylRY2HJZl2BkRFAAAAGpKIxxgtKYJN1TNXr+WiRWWmjPV</DTS:Password>
         </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localdb.lab2]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{3D3B4412-7A82-46BB-BF36-83C8302DD7C7}"
+      DTS:ObjectName="localdb.lab2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=lab2-ssis;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{3D3B4412-7A82-46BB-BF36-83C8302DD7C7}lab2.admin;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localdb.lab3]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{8bc9dc3d-c973-4dbd-abd5-e35386b2d887}"
+      DTS:ObjectName="localdb.lab3">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=lab3-ssis;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{3D3B4412-7A82-46BB-BF36-83C8302DD7C7}lab2.admin;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -367,7 +357,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[FactResellerSales]</property>
+                  name="OpenRowset">[FactResellerSales]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -410,8 +400,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task Lab2\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[lab2.admin]"
-                  connectionManagerRefId="Package.ConnectionManagers[lab2.admin]"
+                  connectionManagerID="Package.ConnectionManagers[localdb.lab2]"
+                  connectionManagerRefId="Package.ConnectionManagers[localdb.lab2]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1312,7 +1302,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[Students]</property>
+                  name="OpenRowset">[Students]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -1355,8 +1345,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task Lab3\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[lab3.admin]"
-                  connectionManagerRefId="Package.ConnectionManagers[lab3.admin]"
+                  connectionManagerID="Package.ConnectionManagers[localdb.lab3]"
+                  connectionManagerRefId="Package.ConnectionManagers[localdb.lab3]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1663,8 +1653,7 @@
                     </inputColumn>
                     <inputColumn
                       refId="Package\Data Flow Task Lab3\Union All.Inputs[Union All Input 1].Columns[Academic Status]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="3"
                       cachedName="Academic Status"
                       lineageId="Package\Data Flow Task Lab3\Derived Column 1.Outputs[Derived Column Output].Columns[Academic Status]">
@@ -1716,8 +1705,7 @@
                     </inputColumn>
                     <inputColumn
                       refId="Package\Data Flow Task Lab3\Union All.Inputs[Union All Input 2].Columns[EAStatus]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="3"
                       cachedName="EAStatus"
                       lineageId="Package\Data Flow Task Lab3\Derived Column.Outputs[Derived Column Output].Columns[EAStatus]">
@@ -4545,45 +4533,33 @@ where [refTable].[Name] = ?</property>
         <NodeLayout
           Size="176,41.6"
           Id="Package\Data Flow Task Lab3"
-          TopLeft="24.9999986340607,94.4666660097572" />
+          TopLeft="280.833317989277,17.3333332127994" />
         <NodeLayout
           Size="176,41.6"
           Id="Package\Data Flow Task Lab5"
-          TopLeft="22.4999987706539,166.399998842875" />
+          TopLeft="533.333304193286,17.3333332127993" />
         <NodeLayout
           Size="198.4,41.6"
           Id="Package\Data Flow Task Lab6 DIM"
-          TopLeft="294.166650594109,163.799998860955" />
+          TopLeft="34.166664799882,127.399999114076" />
         <NodeLayout
           Size="224.8,41.6"
           Id="Package\Data Flow Task Lab6 Fact Task"
-          TopLeft="306.66664991114,230.533331730233" />
+          TopLeft="23.3333320584568,220.999998463193" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="393.366650594109,205.399998860955">
+          TopLeft="134.549998429169,168.999999114076">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="25.699999317031,25.133332869278"
+              EndConnector="0,51.9999993491172"
               Start="0,0"
-              End="25.699999317031,17.633332869278">
+              End="0,44.4999993491172">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,8.566666434639" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,8.566666434639"
-                    Point2="0,12.566666434639"
-                    Point3="4,12.566666434639" />
-                  <mssgle:LineSegment
-                    End="21.699999317031,12.566666434639" />
-                  <mssgle:CubicBezierSegment
-                    Point1="21.699999317031,12.566666434639"
-                    Point2="25.699999317031,12.566666434639"
-                    Point3="25.699999317031,16.566666434639" />
-                  <mssgle:LineSegment
-                    End="25.699999317031,17.633332869278" />
+                    End="0,44.4999993491172" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4599,7 +4575,7 @@ where [refTable].[Name] = ?</property>
     design-time-name="Package\Data Flow Task Lab2">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="218.4,41.6"
           Id="Package\Data Flow Task Lab2\ResellerSales Flat File Source"
@@ -4639,9 +4615,7 @@ where [refTable].[Name] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -4664,7 +4638,7 @@ where [refTable].[Name] = ?</property>
     design-time-name="Package\Data Flow Task Lab3">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="171.2,41.6"
           Id="Package\Data Flow Task Lab3\OLE DB Destination"
@@ -4720,9 +4694,7 @@ where [refTable].[Name] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4756,9 +4728,7 @@ where [refTable].[Name] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4792,9 +4762,7 @@ where [refTable].[Name] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4828,9 +4796,7 @@ where [refTable].[Name] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4864,9 +4830,7 @@ where [refTable].[Name] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -5449,6 +5413,29 @@ where [refTable].[Name] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task Lab6 DIM\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Name_DIM]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task Lab6 DIM\OLE DB Destination">
     <Properties>
       <Property>
@@ -5581,29 +5568,6 @@ where [refTable].[Name] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task Lab6 DIM\Lookup">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Name_DIM]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
