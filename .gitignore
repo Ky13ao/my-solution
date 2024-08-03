@@ -1,7 +1,7 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
 # vscode configuration
-.vscode/settings.json
+**/.vscode/settings.json
 **/.vs
 
 # Hide API Keys

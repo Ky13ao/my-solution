@@ -186,13 +186,11 @@ class Calculator:
         print('[!]Invalid expression: No operator for continue expression!')
       else:
         evalText = f"{result}{evalText}"
-        result = self.evaluate(evalText)
-        print(f'[o]Result: {evalText} = {result}')
-        # try:
-        #   result = self.evaluate(evalText)
-        #   print(f'[o]Result: {evalText} = {result}')
-        # except Exception as e:
-        #   print(f"[!]{e}",)
+        try:
+          result = self.evaluate(evalText)
+          print(f'[o]Result: {evalText} = {result}')
+        except Exception as e:
+          print(f"[!]{e}",)
       if input('[?]Do you wish to continue calculate base on the current result? [y(es)/n(o)]: ').strip().lower() not in ('yes', 'y'):
         break
 
