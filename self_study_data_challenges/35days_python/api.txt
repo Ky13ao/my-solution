@@ -1,0 +1,5 @@
+topdev
+https://api.topdev.vn/td/v2/jobs?keyword=&region_ids=&skills_id=&industries_ids=&job_levels_ids=&job_types_ids=8792&contract_types_ids=&salary_range=&experiences_id=&ordering=newest_job&_f=27904&page=2&page_size=15&locale=en_US&fields[job]=id,title,salary,slug,company,extra_skills,skills_str,skills_arr,skills_ids,job_types_str,job_levels_str,job_levels_arr,job_levels_ids,addresses,status_display,detail_url,job_url,salary,published,refreshed,applied,candidate,requirements_arr,packages,benefits,content,features,contract_types_ids,is_free,is_basic,is_basic_plus,is_distinction&fields[company]=tagline,addresses,skills_arr,industries_arr,industries_ids,industries_str,image_cover,image_galleries,num_job_openings,company_size,nationalities_str,skills_str,skills_ids,benefits,num_employees
+
+
+https://api.topdev.vn/td/v2/jobs?fields[job]=job_types_str,slug,id,title,company,job_levels_str,published,skills_str,addresses,content&page_size=20&locale=en_US&ordering=newest_job
